@@ -203,3 +203,5 @@ MainWindow::closeEvent( QCloseEvent * e )
 	e->accept();
 }
 ```
+
+[Back](intro.md) | [Contents](README.md) | [Next](launching.md)
