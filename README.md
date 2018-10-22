@@ -4,3 +4,8 @@
 2. [Basics of a main window](mainwindow-basics.md)
 3. [Launching](launching.md)
 4. [Plans](plans.md)
+5. [Frame](frame.md)
+6. [Frame on tape](frame-on-tape.md)
+7. [Tape](tape.md)
+8. [View](view.md)
+9. [Reading](reading.md)

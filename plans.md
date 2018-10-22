@@ -11,4 +11,11 @@ frames.
 That's all. Sounds not so complicated, let's do it. And let's start from creating a widget
 that will represent a frame in the tape of frames.
 
-[Back](launching.md) | [Contents](README.md) | [Next](plans.md)
+I wrote the code for the next five chapters before continuing writing this book, because it's
+very difficult to keep in mind all possible issues that could be during coding. So I wrote
+the code, debugged it, checked, and started to write overview of my adventure. After reading
+next five chapter the editor will can open GIF images, user will see the tape with clickable
+frames, and on clicking in the center of window will be displayed selected frame. Believe me, it looks
+nice, and I spend only half a day for developing it, that is why I love Qt so much.
+
+[Back](launching.md) | [Contents](README.md) | [Next](frame.md)
