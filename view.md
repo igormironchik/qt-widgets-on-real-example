@@ -1,3 +1,136 @@
 # View
 
+Now we have everything to display GIF, we just need to combine all together. We
+have Frame class that will display current frame, we have Tape class that will
+display tape of frames. We need a widget that will combine current frame with
+tape, that we will set as central widget of our main window.
+
+Declaration.
+
+```
+#ifndef GIF_EDITOR_VIEW_HPP_INCLUDED
+#define GIF_EDITOR_VIEW_HPP_INCLUDED
+
+// Qt include.
+#include <QWidget>
+#include <QScopedPointer>
+
+
+class Tape;
+class Frame;
+
+
+//
+// View
+//
+
+class ViewPrivate;
+
+//! View with current frame and tape with frames.
+class View final
+	:	public QWidget
+{
+	Q_OBJECT
+
+public:
+	View( QWidget * parent = nullptr );
+	~View() noexcept override;
+
+	//! \return Tape.
+	Tape * tape() const;
+	//! \return Current frame.
+	Frame * currentFrame() const;
+
+private slots:
+	//! Frame selected.
+	void frameSelected( int idx );
+
+private:
+	Q_DISABLE_COPY( View )
+
+	QScopedPointer< ViewPrivate > d;
+}; // class View
+
+#endif // GIF_EDITOR_VIEW_HPP_INCLUDED
+```
+
+No magic at all, all is simple. Private data class.
+
+```
+class ViewPrivate {
+public:
+	ViewPrivate( View * parent )
+		:	m_tape( nullptr )
+		,	m_currentFrame( new Frame( QImage(), Frame::ResizeMode::FitToSize, parent ) )
+		,	q( parent )
+	{
+	}
+
+	//! Tape.
+	Tape * m_tape;
+	//! Current frame.
+	Frame * m_currentFrame;
+	//! Parent.
+	View * q;
+}; // class ViewPrivate
+```
+
+And again all is simple. Current frame will occupy all available space and initialized
+with empty image.
+
+You will not believe how implementation is simple. And again Qt rocks. Look.
+
+```
+View::View( QWidget * parent )
+	:	QWidget( parent )
+	,	d( new ViewPrivate( this ) )
+{
+	QVBoxLayout * layout = new QVBoxLayout( this );
+	layout->setMargin( 0 );
+	layout->addWidget( d->m_currentFrame );
+
+	QScrollArea * scroll = new QScrollArea( this );
+	scroll->setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
+	scroll->setHorizontalScrollBarPolicy( Qt::ScrollBarAlwaysOn );
+	scroll->setMinimumHeight( 150 );
+	scroll->setMaximumHeight( 150 );
+	scroll->setWidgetResizable( true );
+
+	d->m_tape = new Tape( scroll );
+	scroll->setWidget( d->m_tape );
+
+	layout->addWidget( scroll );
+
+	connect( d->m_tape, &Tape::currentFrameChanged,
+		this, &View::frameSelected );
+}
+
+View::~View() noexcept
+{
+}
+
+Tape *
+View::tape() const
+{
+	return d->m_tape;
+}
+
+Frame *
+View::currentFrame() const
+{
+	return d->m_currentFrame;
+}
+
+void
+View::frameSelected( int idx )
+{
+	d->m_currentFrame->setImage( d->m_tape->frame( idx )->image() );
+}
+```
+
+This is really simple. Now we just need to create object of View class and set it
+as central widget to main window. UI part is ready to display GIF image. And in the next
+chapter we will open GIF with Magick++ and use API of our UI classes to set the
+sequnce of frames.
+
 [Back](tape.md) | [Contents](README.md) | [Next](reading.md)
