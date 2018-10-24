@@ -131,6 +131,6 @@ View::frameSelected( int idx )
 This is really simple. Now we just need to create object of View class and set it
 as central widget to main window. UI part is ready to display GIF image. And in the next
 chapter we will open GIF with Magick++ and use API of our UI classes to set the
-sequnce of frames.
+sequence of frames.
 
 [Back](tape.md) | [Contents](README.md) | [Next](reading.md)
