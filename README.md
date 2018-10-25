@@ -9,3 +9,4 @@
 7. [Tape](tape.md)
 8. [View](view.md)
 9. [Reading](reading.md)
+10. [Saving](saving-of-removed-frames.md)
