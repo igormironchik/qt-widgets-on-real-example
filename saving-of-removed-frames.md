@@ -184,4 +184,4 @@ MainWindow::openGif()
 
 Just added a question, set window's title and a small exception safety.
 
-[Back](reading.md) | [Contents](README.md) | [Next](saving-of-removed-frames.md)
+[Back](reading.md) | [Contents](README.md) | [Next](what-else.md)
