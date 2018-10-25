@@ -23,7 +23,7 @@ public:
 	//! Current file name.
 	QString m_currentGif;
 	//! Frames.
-	std::list< Magick::Image > m_frames;
+	std::vector< Magick::Image > m_frames;
 	//! View.
 	View * m_view;
 	//! Parent.
