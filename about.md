@@ -34,4 +34,4 @@ MainWindow::aboutQt()
 
 Have a good day!
 
-[Back](crop.md) | [Contents](README.md)
+[Back](crop.md) | [Contents](README.md) | [Next](welcome.md)
