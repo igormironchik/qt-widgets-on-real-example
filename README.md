@@ -12,3 +12,4 @@
 10. [Saving](saving-of-removed-frames.md)
 11. [What else](what-else.md)
 12. [Crop](crop.md)
+13. [About](about.md)

@@ -974,4 +974,4 @@ MainWindow::applyEdit()
 
 That's all. Now our editor can crop GIFs. So first Alpha version almost done.
 
-[Back](what-else.md) | [Contents](README.md) | [Next](crop.md)
+[Back](what-else.md) | [Contents](README.md) | [Next](about.md)
