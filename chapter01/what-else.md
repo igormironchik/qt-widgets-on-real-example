@@ -7,4 +7,4 @@ frame. After releasing the mouse cursor user should be able to adjust drawn
 rectangle, and on Enter key pressing crop function should crop all frames
 in the GIF. Interesting, isn't it?
 
-[Back](saving-of-removed-frames.md) | [Contents](README.md) | [Next](crop.md)
+[Back](saving-of-removed-frames.md) | [Contents](../README.md) | [Next](crop.md)

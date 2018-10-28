@@ -204,4 +204,4 @@ MainWindow::closeEvent( QCloseEvent * e )
 }
 ```
 
-[Back](intro.md) | [Contents](README.md) | [Next](launching.md)
+[Back](intro.md) | [Contents](../README.md) | [Next](launching.md)

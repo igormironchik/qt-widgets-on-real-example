@@ -124,4 +124,4 @@ GIF images and displays all frames.
 
 And this is only 529 lines of C\+\+ code and 132 lines of code in C\+\+ headers!
 
-[Back](view.md) | [Contents](README.md) | [Next](saving-of-removed-frames.md)
+[Back](view.md) | [Contents](../README.md) | [Next](saving-of-removed-frames.md)

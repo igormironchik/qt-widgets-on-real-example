@@ -7,4 +7,4 @@ applications it's better to use widgets. Full sources of this example you can fi
 
 As backend of image processing I will use Magick++ from ImageMagick.
 
-[Back](README.md) | [Contents](README.md) | [Next](mainwindow-basics.md)
+[Back](../README.md) | [Contents](../README.md) | [Next](mainwindow-basics.md)

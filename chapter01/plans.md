@@ -18,4 +18,4 @@ next five chapters the editor will can open GIF images, user will see the tape w
 frames, and on clicking in the center of window will be displayed selected frame. Believe me, it looks
 nice, and I spend only half a day for developing it, that is why I love Qt so much.
 
-[Back](launching.md) | [Contents](README.md) | [Next](frame.md)
+[Back](launching.md) | [Contents](../README.md) | [Next](frame.md)

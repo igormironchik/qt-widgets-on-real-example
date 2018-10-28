@@ -41,4 +41,4 @@ We created QApplication object, icon of our application, translator, that will l
 system's locale, and created MainWindow object on the stack. Set default size, and invoked show() method. Voila,
 now we need to start application's event loop, what app.exec() do.
 
-[Back](mainwindow-basics.md) | [Contents](README.md) | [Next](plans.md)
+[Back](mainwindow-basics.md) | [Contents](../README.md) | [Next](plans.md)

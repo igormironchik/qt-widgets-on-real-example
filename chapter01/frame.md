@@ -240,4 +240,4 @@ Frame::mouseReleaseEvent( QMouseEvent * e )
 Great, a few hundred lines of code (with blank ones and comments) and we have a class that will display
 image of the frame, have different behavior for different cases. Qt rocks!
 
-[Back](plans.md) | [Contents](README.md) | [Next](frame-on-tape.md)
+[Back](plans.md) | [Contents](../README.md) | [Next](frame-on-tape.md)

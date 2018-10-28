@@ -242,4 +242,4 @@ Tape::removeFrame( int idx )
 }
 ```
 
-[Back](frame-on-tape.md) | [Contents](README.md) | [Next](view.md)
+[Back](frame-on-tape.md) | [Contents](../README.md) | [Next](view.md)

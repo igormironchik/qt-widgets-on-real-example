@@ -133,4 +133,4 @@ as central widget to main window. UI part is ready to display GIF image. And in 
 chapter we will open GIF with Magick++ and use API of our UI classes to set the
 sequence of frames.
 
-[Back](tape.md) | [Contents](README.md) | [Next](reading.md)
+[Back](tape.md) | [Contents](../README.md) | [Next](reading.md)
