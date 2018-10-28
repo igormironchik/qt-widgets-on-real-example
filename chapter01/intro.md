@@ -1,4 +1,4 @@
-# Introduction
+# Chapter 1
 
 I want to show on the real example how to create simple GIF editor with Qt widgets.
 Why Qt widgets and not QML? The answer is simple - I want to create a desktop application, and on my opinion for desktop
