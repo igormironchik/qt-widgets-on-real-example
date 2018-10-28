@@ -1,6 +1,6 @@
 # The book about a real examples of Qt Widgets usage
 
-1. Chapter 1
+1. [Chapter 1](chapter01/intro.md)
    * [Introduction](chapter01/intro.md)
    * [Basics of a main window](chapter01/mainwindow-basics.md)
    * [Launching](chapter01/launching.md)
@@ -14,6 +14,6 @@
    * [What else](chapter01/what-else.md)
    * [Crop](chapter01/crop.md)
    * [About](chapter01/about.md)
-2. Chapter 2
+2. [Chapter 2](chapter02/intro.md)
    * [Introduction](chapter02/intro.md)
 3. [Links](links.md)
