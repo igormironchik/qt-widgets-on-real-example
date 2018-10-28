@@ -122,6 +122,6 @@ GIF images and displays all frames.
 
 ![Opened GIF](img/opened.png)
 
-And this is only 534 lines of C\+\+ code and 133 lines of code in C\+\+ headers!
+And this is less than 1K lines of code!
 
 [Back](view.md) | [Contents](../README.md) | [Next](saving-of-removed-frames.md)
