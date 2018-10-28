@@ -51,6 +51,8 @@ public:
 
 	//! \return Is frame checked.
 	bool isChecked() const;
+	//! Set checked.
+	void setChecked( bool on = true );
 
 	//! \return Counter.
 	int counter() const;
@@ -184,6 +186,12 @@ bool
 FrameOnTape::isChecked() const
 {
 	return d->m_checkBox->isChecked();
+}
+
+void
+FrameOnTape::setChecked( bool on )
+{
+	d->m_checkBox->setChecked( on );
 }
 
 int
