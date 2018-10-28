@@ -1,4 +1,4 @@
-# The book about a real examples of Qt Widgets usage
+# The book about real examples of Qt Widgets usage
 
 1. [Chapter 1](chapter01/intro.md)
    * [Introduction](chapter01/intro.md)
