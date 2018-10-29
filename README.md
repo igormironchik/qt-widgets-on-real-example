@@ -16,4 +16,5 @@
    * [About](chapter01/about.md)
 2. [Chapter 2](chapter02/intro.md)
    * [Introduction](chapter02/intro.md)
+   * [View](chapter02/view.md)
 3. [Links](links.md)

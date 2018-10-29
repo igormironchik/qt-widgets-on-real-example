@@ -22,4 +22,4 @@ Window of the application displays stream from the camera and on closing
 minimizes to tray, so the application works in the background and
 protects the entrusted territory.
 
-[Back](../chapter01/about.md) | [Contents](../README.md) | [Next](intro.md)
+[Back](../chapter01/about.md) | [Contents](../README.md) | [Next](view.md)
