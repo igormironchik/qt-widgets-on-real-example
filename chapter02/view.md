@@ -85,7 +85,7 @@ ViewPrivate::init()
 }
 ```
 
-I the data class I store current frame and a flag that current frame was resized. This is the main trick,
+In the data class I store current frame and a flag that current frame was resized. This is the main trick,
 draw() slot will be connected to video surface signal and will receive frames at maximum speed in the
 background, where we will just copy frame and set resized flag to false, and will trigger update
 of the widget. GUI part of the view will draw new frame when it can do it, so we will not have a
