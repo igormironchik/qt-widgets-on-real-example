@@ -67,9 +67,6 @@ public:
 	{
 	}
 
-	//! Init.
-	void init();
-
 	//! Image.
 	QImage m_image;
 	//! Resized?
@@ -77,12 +74,6 @@ public:
 	//! Parent.
 	View * q;
 }; // class ViewPrivate
-
-void
-ViewPrivate::init()
-{
-	q->setAutoFillBackground( false );
-}
 ```
 
 In the data class I store current frame and a flag that current frame was resized. This is the main trick,
@@ -119,7 +110,6 @@ View::paintEvent( QPaintEvent * )
 	if( isVisible() )
 	{
 		QPainter p( this );
-		p.setBackground( Qt::black );
 
 		if( !d->m_image.isNull() )
 		{
