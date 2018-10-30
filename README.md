@@ -19,4 +19,5 @@
    * [Introduction](chapter02/intro.md)
    * [View](chapter02/view.md)
    * [Video surface](chapter02/surface.md)
+   * [Camera](chapter02/camera.md)
 4. [Links](links.md)
