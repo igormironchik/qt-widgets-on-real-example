@@ -20,4 +20,5 @@
    * [View](chapter02/view.md)
    * [Video surface](chapter02/surface.md)
    * [Camera](chapter02/camera.md)
+   * [Capture images](chapter02/capture.md)
 4. [Links](links.md)

@@ -143,4 +143,4 @@ MainWindowPrivate::stopCamera()
 This allow us to have always initialized camera (if this is possible) with
 correct resolution and frame rate.
 
-[Back](surface.md) | [Contents](../README.md) | [Next](../links.md)
+[Back](surface.md) | [Contents](../README.md) | [Next](capture.md)
