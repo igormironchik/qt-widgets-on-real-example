@@ -298,7 +298,8 @@ We are converting QVideoFrame to QImage, aplying transformation if needed, detec
 motion on each key frame, updating counters and emitting frames for drawing.
 Important to connect to newFrame() signal as queued one, as present() method
 invoked in non-GUI thread. And very important to emit full copy of image because
-if we will emit temporary image object it will be destroyed and in slot we will
+if we will emit temporary image object the data in it will be destroyed as
+original QImage uses data from QVideoFrame directly and in slot we will
 try to aceess destroyed memory.
 
 Motion detection is made with help of OpenCV and is quite simple, look.
