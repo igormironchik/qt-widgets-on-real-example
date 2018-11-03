@@ -85,4 +85,4 @@ Where d->m_stopTimer->timeout() connected to MainWindow::stopRecording().
 
 Thus, we will have pictures of the attackers on the protected area.
 
-[Back](camera.md) | [Contents](../README.md) | [Next](../links.md)
+[Back](camera.md) | [Contents](../README.md) | [Next](../chapter03/intro.md)

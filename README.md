@@ -21,4 +21,7 @@
    * [Video surface](chapter02/surface.md)
    * [Camera](chapter02/camera.md)
    * [Capture images](chapter02/capture.md)
-4. [Links](links.md)
+4. [Chapter 3](chapter03/intro.md)
+   * [Introduction](chapter03/intro.md)
+   * [Implementation](chapter03/impl.md)
+5. [Links](links.md)
