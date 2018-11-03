@@ -26,7 +26,7 @@ void initTape()
 
 But Magick++ operation should work in separate thread as we can't change the code
 of Magick++ functions. I decided to run these functions with QRunnable on
-QThreadPool. Magick++ can thow exceptions, so I declared the base class for all
+QThreadPool. Magick++ can throw exceptions, so I declared the base class for all
 my runnables.
 
 ```
