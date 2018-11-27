@@ -68,7 +68,7 @@ private:
 #endif // GIF_EDITOR_CROP_HPP_INCLUDED
 ```
 
-API is simple, but let's look at what is under a cowling.
+API is simple, but let's look at what is under the hood.
 
 Crop rectangle will have handles to change geometry of the rectangle. And in the code
 I defined a constant to store the size for it.
