@@ -1,7 +1,7 @@
 # Camera
 
-We have video surface that can be used as view finder for QCamera,
-we have view that will display stream from the camera, now we need
+We have the video surface that can be used as viewfinder for QCamera,
+we have the view that will display stream from the camera, now we need
 to initialize the camera.
 
 ```
@@ -60,9 +60,9 @@ started it reads configuration and initializes camera, we just are looking for s
 camera in the system, and if found allocating new QCamera, QCameraImageCapture objects,
 set view finder - our video surface (m_frames).
 
-We connected to QCamera::statusChanged signal to set resolution of the camera, we
+We connected to QCamera::statusChanged signal to set a resolution of the camera, we
 need to do it exactly in QCamera::LoadedStatus state, as only there we can ask the
-camera for supported view finder settings.
+camera for supported viewfinder settings.
 
 ```
 void
