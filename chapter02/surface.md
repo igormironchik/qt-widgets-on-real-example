@@ -1,32 +1,32 @@
 # Video surface
 
 As said we need to access each frame in the camera's stream. For such cases in Qt
-is QAbstractVideoSurface. Custom video surface can be set to QCamera as view
-fider, what we will do. But video surface doesn't draw anything, it just got
+is QAbstractVideoSurface. Custom video surface can be set to QCamera as viewfider,
+what we will do. But the video surface doesn't draw anything, it just got
 access to video frames. Painting of frames will do view that was described
 in the previous section.
 
-When derriving from QAbstractVideoSurface developer should understand that
-present() method will be invoked from non-GUI thread. And very important to
+When deriving from QAbstractVideoSurface developer should understand that
+present() method will be invoked from the non-GUI thread. And very important to
 return correct list of supported formats from supportedPixelFormats()
 method. Video frames can come from the device in various formats, but
-we want to convert QVideoFrame to QImage, so format of video frame
-should be of compatible with QImage format. Qt can do the trick by
+we want to convert QVideoFrame to QImage, so the format of video frame
+should be compatible with QImage format. Qt can do the trick by
 pre-converting of video frames format to supported by our video
-surface format, so we will return just convertable to QImage pixel
+surface format, so we will return just convertible to QImage pixel
 formats.
 
 Our video surface will detect motions and notify the application about it.
-Surface will emit signal with new frames with QImage, but for performance reasons
-we will emit every frame only if motion is detected, otherwise we will emit
-only key frames. Surface will have abilities to transform video frame
+Surface will emit a signal with new frames with QImage, but for performance reasons
+we will emit every frame only if the motion is detected, otherwise we will emit
+only keyframes. Surface will have abilities to transform video frame
 before emitting for painting, such as mirroring and rotating.
 
-Detection of motions is based on comparing key frame with the current one.
-Surface will emit signal about difference value of the current image
-and key frame. If this value (L2 relative error) is bigger than threshold
-then motion is detected. Each device has its own parameters of noice in the
-frames, so threshold is configurable.
+Detection of motions is based on comparing keyframe with the current one.
+Surface will emit a signal about difference value of the current image
+and keyframe. If this value (L2 relative error) is bigger than a threshold
+then the motion is detected. Each device has its own parameters of noise in the
+frames, so the threshold is configurable.
 
 Declaration.
 
@@ -294,13 +294,13 @@ Frames::present( const QVideoFrame & frame )
 }
 ```
 
-We are converting QVideoFrame to QImage, aplying transformation if needed, detecting
-motion on each key frame, updating counters and emitting frames for drawing.
+We are converting QVideoFrame to QImage, applying transformation if needed, detecting
+motion on each keyframe, updating counters and emitting frames for drawing.
 Important to connect to newFrame() signal as queued one, as present() method
-invoked in non-GUI thread. And very important to emit full copy of image because
+invoked in non-GUI thread. And very important to emit a full copy of image because
 if we will emit temporary image object the data in it will be destroyed as
-original QImage uses data from QVideoFrame directly and in slot we will
-try to aceess destroyed memory.
+original QImage uses data from QVideoFrame directly and in the slot we will
+try to access destroyed memory.
 
 Motion detection is made with help of OpenCV and is quite simple, look.
 
@@ -417,7 +417,7 @@ Frames::second()
 }
 ```
 
-If to set this video surface to QCamera as view finder and connect newFrame() signal to
+If to set this video surface to QCamera as viewfinder and connect newFrame() signal to
 View's draw() slot then we will see the stream from the camera in View widget.
 
 [Back](view.md) | [Contents](../README.md) | [Next](camera.md)
