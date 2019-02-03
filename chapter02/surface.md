@@ -417,7 +417,7 @@ Frames::second()
 }
 ```
 
-If to set this video surface to QCamera as viewfinder and connect newFrame() signal to
+If to set this video surface to QCamera as viewsfinder and connect newFrame() signal to
 View's draw() slot then we will see the stream from the camera in View widget.
 
 [Back](view.md) | [Contents](../README.md) | [Next](camera.md)
