@@ -1,9 +1,9 @@
 # View
 
 Now we have everything to display GIF, we just need to combine all together. We
-have Frame class that will display current frame, we have Tape class that will
-display tape of frames. We need a widget that will combine current frame with
-tape, that we will set as central widget of our main window.
+have Frame class that will display the current frame, we have Tape class that will
+display tape of frames. We need a widget that will combine the current frame with
+tape, that we will set as a central widget of our main window.
 
 Declaration.
 
@@ -76,7 +76,7 @@ public:
 ```
 
 And again all is simple. Current frame will occupy all available space and initialized
-with empty image.
+with an empty image.
 
 You will not believe how implementation is simple. And again Qt rocks. Look.
 
@@ -128,8 +128,8 @@ View::frameSelected( int idx )
 }
 ```
 
-This is really simple. Now we just need to create object of View class and set it
-as central widget to main window. UI part is ready to display GIF image. And in the next
+This is really simple. Now we just need to create an object of View class and set it
+as a central widget to the main window. UI part is ready to display a GIF image. And in the next
 chapter we will open GIF with Magick++ and use API of our UI classes to set the
 sequence of frames.
 
