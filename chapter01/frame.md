@@ -2,12 +2,12 @@
 
 ## Class
 
-Frame.. This is a unti of GIF image. We need a thumbnail frame on the tap to display
-sequence of frames in GIF, and bigger one to display current selected frame. The task
+Frame... This is an unit of GIF image. We need a thumbnail frame on the tape to display
+a sequence of frames in GIF, and a bigger one to display currently selected frame. The task
 of the frame is to display image, so why not to have one class for both cases? Hm, why not?
-But for the current frame we need image to be scaled to size of available area with keeping
-aspect ratio, whereas for frame on the tap we need an image scaled to height of the tap.
-Image on the frame should automatically resize on parent resizing, and it should be
+But for the current frame we need the image to be scaled to the size of the available area with keeping
+aspect ratio, whereas for the frame on the tape we need an image scaled to the height of the tape.
+The image on the frame should automatically resize on parent resizing, and it should be
 clickable. I guess that this is enough for our application. Possibly we will need something
 additional in the future, possibly, but for the first attempt this is all that we need.
 Let declare a class of our frame.
@@ -101,12 +101,12 @@ public:
 }; // class FramePrivate
 ```
 
-I declared two method to create a thumbnail of needed size and auxiliary method to do some stuff
+I declared two methods to create a thumbnail of needed size and auxiliary method to do some stuff
 when widget will be resized, as creating a thumbnail, notifying layouts about size change and
 updating our frame.
 
-The creation of a thumbnail is different for different risize modes of a frame. For fit to size mode
-we need to scale in both directions keeping aspect ratio of the image, whereas for the fit to height
+The creation of a thumbnail is different for different resize modes of a frame. For fit to size mode
+we need to scale in both directions keeping the aspect ratio of the image, whereas for the fit to height
 mode we just need to scale to height keeping aspect ratio too. Let's have a look.
 
 ```
@@ -238,6 +238,6 @@ Frame::mouseReleaseEvent( QMouseEvent * e )
 ```
 
 Great, a few hundred lines of code (with blank ones and comments) and we have a class that will display
-image of the frame, have different behavior for different cases. Qt rocks!
+image of the frame, have different behaviour for different cases. Qt rocks!
 
 [Back](plans.md) | [Contents](../README.md) | [Next](frame-on-tape.md)
