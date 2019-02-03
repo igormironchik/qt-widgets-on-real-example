@@ -2,10 +2,10 @@
 
 Long Magick++ operations like readImages(), coalesceImages(),
 writeImages() can longs very much. And during these operations and another UI
-preparations I'd like to show busy animation. I moved view of the application to the
-QStackedWidget, that was set as central widget of QMainWindow, and in this stacked widget
+preparations I'd like to show busy animation. I moved the view of the application to the
+QStackedWidget, that was set as a central widget of QMainWindow, and in this stacked widget
 I added a page with busy animation. During long operations I will show the page with
-animation, and when all is done I will show ready result.
+animation, and when all is done I will show the ready result.
 
 With Qt's stuff all is simple, I just dilute the code with
 QApplication::processEvents(), like.
@@ -106,8 +106,8 @@ void waitThreadPool()
 That's all. Now GIF editor shows busy animation during long operations, UI is responsive.
 
 I decided to disable all actions during such operations, even quit from the application. But
-what if user wants to exit from application during opening? We can allow to do it on close
-button in window's title click.
+what if the user wants to exit from the application during opening? We can allow to do it on the close
+button in the window's title click.
 
 ```
 void
@@ -132,7 +132,7 @@ MainWindow::closeEvent( QCloseEvent * e )
 
 Where d->m_busyFlag is a bool that I set to true when showing busy animation.
 
-Wonderful, UI is always responsive and user can terminate the application during
+Wonderful, UI is always responsive and the user can terminate the application during
 the long operation at any time.
 
 [Back](intro.md) | [Contents](../README.md) | [Next](../links.md)
