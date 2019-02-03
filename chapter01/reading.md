@@ -1,9 +1,9 @@
 # Reading
 
 In the UI we use QImage, but Magic++ works with its own Image class.
-We need convertion method from Magick::Image to QImage. Great place for this
-is in main window private data class. We need to create object of View class
-and set it as central widget of main window, and again the place for it
+We need conversion method from Magick::Image to QImage. Great place for this
+is in the main window private data class. We need to create an object of View class
+and set it as a central widget of the main window, and again the place for it
 is main window private data class. So let's look at it.
 
 ```
@@ -31,8 +31,8 @@ public:
 }; // class MainWindowPrivate
 ```
 
-We will work in the future with sequence of Magick::Image objects for editing,
-so we have data member for it. When GIf opened and we want to open a new one
+We will work in the future with a sequence of Magick::Image objects for editing,
+so we have a data member for it. When GIf opened and we want to open a new one
 we should clear the current view, so let's look at the clearView() method.
 
 ```
@@ -47,7 +47,7 @@ MainWindowPrivate::clearView()
 
 No comments.
 
-Convertion from Magick::Image to QImage is simple as well.
+Conversion from Magick::Image to QImage is simple as well.
 
 ```
 QImage
