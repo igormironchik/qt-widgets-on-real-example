@@ -1,14 +1,14 @@
 # Frame on tape
 
 Well, we have a frame widget that will display a thumbnail image. But this is not enough
-for a frame on the tape. Frame on the tape should have a border, that should signal that
-this frame is current or not, frame on the tape should have a check box to have ability
+for a frame on the tape. The frame on the tape should have a border, that should signal that
+this frame is current or not, the frame on the tape should have a checkbox to have the ability
 to remove some frames from the GIF, just deselect some frames, save file, and voila. And
-frame on the tape should have counter, indicating position of the frame on the tape.
+frame on the tape should have a counter, indicating the position of the frame on the tape.
 
 Sounds like we can do it with standard widgets and layouts. We can create a widget, inherited
-from QFrame to have a border, QCheckBox for check box, QLabel for position indicator,
-and QVBoxLayout and QHBoxLayout for layouting. Amazing, there is nothing better than
+from QFrame to have a border, QCheckBox for checkbox, QLabel for position indicator,
+and QVBoxLayout and QHBoxLayout for layout. Amazing, there is nothing better than
 reusing of the code, especially if this code written not by us.
 
 The declaration of the new class looks like.
@@ -73,8 +73,8 @@ private:
 #endif // GIF_EDITOR_FRAMEONTAPE_HPP_INCLUDED
 ```
 
-Nothing difficult. We just added some auxiliary API to have access to underlying full image,
-counter or position of the frame, ability to set and check if current frame is current, and
+Nothing difficult. We just added some auxiliary API to have access to the underlying full image,
+counter or position of the frame, ability to set and check if the current frame is current, and
 ability to check if this frame is checked.
 
 Implementation really very simple. Look at private data class.
@@ -131,7 +131,7 @@ FrameOnTapePrivate::setCurrent( bool on )
 
 We just changing a frame's style to indicate that this frame is currently selected.
 
-And implementation of the class is so simple that even doesn't need any comments.
+And the implementation of the class is so simple that even doesn't need any comments.
 
 ```
 FrameOnTape::FrameOnTape( const QImage & img, int counter, QWidget * parent )
