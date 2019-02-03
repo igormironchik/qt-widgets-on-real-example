@@ -37,7 +37,7 @@ int main( int argc, char ** argv )
 }
 ```
 
-We created QApplication object, icon of our application, translator, that will load translation according to
+We created QApplication object, an icon of our application, translator, that will load translation according to
 system's locale, and created MainWindow object on the stack. Set default size, and invoked show() method. Voila,
 now we need to start application's event loop, what app.exec() do.
 
