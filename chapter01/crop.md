@@ -1,8 +1,8 @@
 # Crop
 
 As said we need to implement a crop function. First of all we need to implement a widget
-that will draw rectangle on top of current frame, that will show the crop region. I spent
-for this widget not so little time, a day, this is because this widget is very custom
+that will draw a rectangle on top of the current frame, that will show the crop region. I spent
+on this widget not so little time, a day, this is because this widget is very custom
 and complicated in implementation, not hard but complicated. There are a lot of calculations
 of regions of handles for adjusting the rectangle, mouse cursor handling, cursor overriding,
 etc. Let's have a look at this widget.
@@ -70,7 +70,7 @@ private:
 
 API is simple, but let's look at what is under the hood.
 
-Crop rectangle will have handles to change geometry of the rectangle. And in the code
+Crop rectangle will have handles to change the geometry of the rectangle. And in the code
 I defined a constant to store the size for it.
 
 ```
@@ -269,7 +269,7 @@ public:
 }; // class CropFramePrivate
 ```
 
-Uhh, so much methods... I defined some methods in the class, these methods just returns
+Uhh, so many methods... I defined some methods in the class, these methods just returns
 rectangles of the handles, you could understand it from their names.
 
 We will resize, move selection rectangle, and we don't want this rectangle to go out of
@@ -313,8 +313,8 @@ CropFramePrivate::boundLeftTopToAvailable( const QPoint & p ) const
 }
 ```
 
-When user moves mouse cursor over widget, different regions we need to override cursor
-to help user understand what he can do. Auxiliary methods to override cursor.
+When the user moves the mouse cursor over the widget, different regions we need to override cursor
+to help the user understand what he can do. Auxiliary methods to override cursor.
 
 ```
 void
@@ -455,7 +455,7 @@ CropFramePrivate::resize( const QPoint & pos )
 }
 ```
 
-We can draw crop rectangle on the scaled frame, but for cropping we need to know rectangle
+We can draw a crop rectangle on the scaled frame, but for cropping we need to know rectangle
 to crop in the original frame's coordinates.
 
 ```
@@ -491,7 +491,7 @@ CropFramePrivate::cropped( const QRect & full ) const
 ```
 
 You can ask how it's possible to write all these methods first and only then
-implement methods of the widget? I guess that this is impossible. I wrote skeleton of widget
+implement methods of the widget? I guess that this is impossible. I wrote a skeleton of widget
 and step by step wrote code, so these private data methods were born from time to time
 when they were needed. Developing is an iterative process. With some experience you
 will come to it, but I believe that you are an experienced C++ developer and just want
@@ -647,11 +647,11 @@ CropFrame::paintEvent( QPaintEvent * )
 }
 ```
 
-The behavior of crop region is like in Gimp. When user drawn rectangle on released mouse
-he will see transparent rectangle with darken semi-transparent background on non-selected
-region and corner handles. To access top, bottom, left and right handles user should
-move mouse cursor in the centers of the edges. And when mouse cursor is on a handle,
-only this handle will be drawn and mouse cursor will be overrided, like in Gimp.
+The behaviour of crop region is like in Gimp. When user has drawn rectangle on mouse release
+he will see a transparent rectangle with darkening semi-transparent background on a non-selected
+region and corner handles. To access the top, bottom, left and right handles user should
+move the mouse cursor in the centres of the edges. And when the mouse cursor is on a handle,
+only this handle will be drawn and the mouse cursor will be overridden, like in Gimp.
 
 And mouse handling.
 
