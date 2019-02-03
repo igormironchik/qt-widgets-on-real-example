@@ -1,10 +1,10 @@
 # Saving
 
 We can open GIF, we can navigate through the frames, we can uncheck some frames.
-Let's do saving of GIF with regards of unchecked frames. This is a basics of any
+Let's do saving of GIF with regards to unchecked frames. This is a basic of any
 GIF editor. First of all we should notify user that file was changed when he
 checks/unchecks frames. For it we should connect to Tape's checkStateChanged()
-signal. Let's do it in the constrauctor of MainWindow.
+signal. Let's do it in the constructor of MainWindow.
 
 ```
 connect( d->m_view->tape(), &Tape::checkStateChanged,
@@ -119,7 +119,7 @@ Tape::removeUnchecked()
 
 We just removing unchecked frames and updating counter.
 
-To be more user frendly I changed a little openGif() slot.
+To be more user friendly I changed a little openGif() slot.
 
 ```
 oid
