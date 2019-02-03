@@ -1,7 +1,7 @@
 # What else
 
-As said for the first Alpha version we need a crop function. Cropping should be
-enableable from some action in the tab bar or menu. When crop is enabled user
+As said for the first Alpha version we need a crop function. The user should be able to
+enable cropping from some action in the tab bar or menu. When the crop is enabled user
 should be able to draw by dragging mouse cursor a rectangle on the current
 frame. After releasing the mouse cursor user should be able to adjust drawn
 rectangle, and on Enter key pressing crop function should crop all frames
