@@ -2,11 +2,11 @@
 
 In this project we want to detect motion in the frame, so we need to have
 access to each frame in the camera's stream. So the only solution is
-QAbstractVideoSurface. And we want to display stream from camera in
-some case of view finder. We need to tie together QAbstractVideoSurface
-and any view finder. I see only one solution - is to transmit QImage
-with current frame from QAbstractVideoSurface to custom view finder,
-that will display current frame.
+QAbstractVideoSurface. And we want to display stream from a camera in
+some case of viewfinder. We need to tie together QAbstractVideoSurface
+and any viewfinder. I see only one solution - is to transmit QImage
+with the current frame from QAbstractVideoSurface to custom viewfinder,
+that will display the current frame.
 
 So let's do such a view finder.
 
@@ -76,10 +76,10 @@ public:
 }; // class ViewPrivate
 ```
 
-In the data class I store current frame and a flag that current frame was resized. This is the main trick,
+In the data class I store the current frame and a flag that current frame was resized. This is the main trick,
 draw() slot will be connected to video surface signal and will receive frames at maximum speed in the
-background, where we will just copy frame and set resized flag to false, and will trigger update
-of the widget. GUI part of the view will draw new frame when it can do it, so we will not have a
+background, where we will just copy frame and set resized flag to false, and will trigger an update
+of the widget. GUI part of the view will draw a new frame when it can do it, so we will not have a
 long queue of frames to draw, we will quickly process this queue. Let's look.
 
 ```
@@ -139,8 +139,8 @@ View::resizeEvent( QResizeEvent * e )
 }
 ```
 
-We do actual resize of the frame only in paint event and only if it was not done before. Believe me
-in the running application I don't see any flickering. This simple code do what it was designed for.
+We do actual resize of the frame only in paint event and only if it was not done before. Believe me,
+in the running application I don't see any flickering. This simple code does what it was designed for.
 Memory and CPU usage is constant and very low.
 
 [Back](intro.md) | [Contents](../README.md) | [Next](surface.md)
