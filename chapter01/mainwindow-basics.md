@@ -1,14 +1,14 @@
-# Basics of main window
+# Basics of the main window
 
 ## Introduction
 
-Each Qt widgets application should have one or more top level widgets. For GIF editor we need one top level window
-where we will display frames, current frame, tool bar with actions for editing, menu bar with different actions.
-Qt has ready to use class QMainWindow whick we can derive from and implement needed for us functionality.
+Each Qt widgets application should have one or more top-level widgets. For GIF editor we need one top-level window
+where we will display frames, current frame, toolbar with actions for editing, a menu bar with different actions.
+Qt has ready to use class QMainWindow which we can derive from and implement needed for our functionality.
 
 ## Inheritance
 
-Let's inherit from QMainWindow to have ability to implement our functionality. We will start from basics, in the mainwindow.hpp we have:
+Let's inherit from QMainWindow to have the ability to implement our functionality. We will start from basics, in the mainwindow.hpp we have:
 
 ```
 #ifndef GIF_EDITOR_MAINWINDOW_HPP_INCLUDED
@@ -44,13 +44,13 @@ private:
 #endif // GIF_EDITOR_MAINWINDOW_HPP_INCLUDED
 ```
 
-I publicly inheritted from QMainWindow and in private section you can see useage of Q_OBJECT macros.
-This macros is needed by Qt's moc to generate auxiliary code for signals and slots. At this time we
+I publicly inherited from QMainWindow and in private section you can see usage of Q_OBJECT macros.
+This macro is needed by Qt's moc to generate auxiliary code for signals and slots. At this time we
 don't have any signals or slots, but it's a good practice to use Q_OBJECT macros in every class derived from
 QObject.
 
 I use in my Qt applications private implementation idiom, for this I declared class MainWindowPrivate and in
-MainWindow I declared member - smart pointer to MainWindowPrivate. Private implementation is good for reduce
+MainWindow I declared member - smart pointer to MainWindowPrivate. The private implementation is good for reducing
 compile time, it hides details of implementation from interface.
 
 Implementation at this point is very simple (mainwindow.cpp):
@@ -86,13 +86,13 @@ MainWindow::MainWindow()
 }
 ```
 
-For the future I defined member to the parent object of MainWindow in MainWindowPrivate class. It can help us
+For the future, I defined member to the parent object of MainWindow in MainWindowPrivate class. It can help us
 in the future to access MainWindow methods from data class (MainWindowPrivate).
 
 ## Menu
 
-Ok. We have skeleton of our main window. Let's add File menu with open, save, save as and quit actions. We
-want to implement GIF editor and without such basic functions our application will cost nothing. First of all
+Ok. We have the skeleton of our main window. Let's add File menu with open, save, save as and quit actions. We
+want to implement GIF editor and without such basic functions our application will cost nothing. First of all,
 let's define slots in MainWindow class for these actions.
 
 ```
@@ -107,8 +107,8 @@ private slots:
 	void quit();
 ```
 
-QMainWindow has menu bar, status bar, central widget, etc. For such actions it's a good place in File menu,
-as in almost all desktop applications. In the constructor of MainWindow we will add code to create File
+QMainWindow has a menu bar, status bar, central widget, etc. For such actions it's a good place in the File menu,
+as in almost all desktop applications. In the constructor of MainWindow we will add code to create the File
 menu and fill it with actions. Let's see:
 
 ```
@@ -135,7 +135,7 @@ I set title of the main window and created File menu with actions and separators
 
 ## Quit from the application
 
-First slot that we will implement is quit from the editor and empty implementations of another slots.
+The first slot that we will implement is quit from the editor and empty implementations of other slots.
 
 ```
 void
@@ -172,7 +172,7 @@ MainWindow::quit()
 }
 ```
 
-QWidget, the parent of QMainWindow, has mechanism to read/set flag if something was changed in. Why not?
+QWidget, the parent of QMainWindow, has a mechanism to read/set a flag if something was changed in. Why not?
 In our editor we will set this flag on user's changes and clear it on saving. For the future I added in data
 class member m_currentGif of QString type, where I will store the full path to the current GIF image.
 
