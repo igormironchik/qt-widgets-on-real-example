@@ -122,7 +122,7 @@ We just removing unchecked frames and updating counter.
 To be more user friendly I changed a little openGif() slot.
 
 ```
-oid
+void
 MainWindow::openGif()
 {
 	const auto fileName = QFileDialog::getOpenFileName( this,
