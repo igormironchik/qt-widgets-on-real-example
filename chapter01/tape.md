@@ -101,7 +101,7 @@ public:
 }; // class TapePrivate
 ```
 
-We need access to all frames, so we have a data member of type QList< FrameOnTape >,
+We need access to all frames, so we have a data member of type QList\< FrameOnTape \>,
 a auxiliary member that will hold a pointer to the currently selected frame, and our layout.
 
 Trivial methods.
