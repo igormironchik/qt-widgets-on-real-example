@@ -19,4 +19,4 @@ UI framework, in my opinion, for developing cross-platform, effective desktop
 applications on the real examples. You can look at the chapters of this book as on
 tutorials.
 
-[Back](../README.md) | [Contents](../README.md) | [Next](chapter01/intro.md)
+[Back](README.md) | [Contents](README.md) | [Next](chapter01/intro.md)
