@@ -44,9 +44,9 @@ private:
 #endif // GIF_EDITOR_MAINWINDOW_HPP_INCLUDED
 ```
 
-I publicly inherited from QMainWindow and in private section you can see usage of Q_OBJECT macros.
+I publicly inherited from QMainWindow and in private section you can see usage of Q\_OBJECT macros.
 This macro is needed by Qt's moc to generate auxiliary code for signals and slots. At this time we
-don't have any signals or slots, but it's a good practice to use Q_OBJECT macros in every class derived from
+don't have any signals or slots, but it's a good practice to use Q\_OBJECT macros in every class derived from
 QObject.
 
 I use in my Qt applications private implementation idiom, for this I declared class MainWindowPrivate and in
