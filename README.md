@@ -1,5 +1,14 @@
 # The book about real examples of Qt Widgets usage
 
+Copyright (C)  2019  Igor Mironchik.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+
 1. [Preface](preface.md)
 2. [Chapter 1 - GIF editor](chapter01/intro.md)
    * [Introduction](chapter01/intro.md)
@@ -25,3 +34,4 @@
    * [Introduction](chapter03/intro.md)
    * [Implementation](chapter03/impl.md)
 5. [Links](links.md)
+6. [GNU Free Documentation License](fdl-1.3.md)
