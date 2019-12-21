@@ -135,4 +135,4 @@ Where d->m_busyFlag is a bool that I set to true when showing busy animation.
 Wonderful, UI is always responsive and the user can terminate the application during
 the long operation at any time.
 
-[Back](intro.md) | [Contents](../README.md) | [Next](../links.md)
+[Back](intro.md) | [Contents](../README.md) | [Next](../chapter04/mistakes.md)
