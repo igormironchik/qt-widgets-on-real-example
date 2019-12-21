@@ -104,9 +104,6 @@ here, possibly adding/removing frames would be faster with Model/View, but
 simple code for custom view of frames on tape with controls outweighed the
 Model/View.
 
-And I can use `qss` to style my application, whereas with custom delegate
-it would not be possible.
-
 This question is most controversial for me...
 
 ## QMovie
