@@ -33,6 +33,6 @@ Free Documentation License".
 4. [Chapter 3 - multithreading](chapter03/intro.md)
    * [Introduction](chapter03/intro.md)
    * [Implementation](chapter03/impl.md)
-5. [Chapter 4 - mistakes Handling](chapter04/mistakes.md)
+5. [Chapter 4 - mistakes handling](chapter04/mistakes.md)
 6. [Links](links.md)
 7. [GNU Free Documentation License](fdl-1.3.md)
