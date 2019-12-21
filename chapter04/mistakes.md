@@ -97,7 +97,7 @@ widget was simpler.
 I wrote a lot of models, custom views with custom delegates. I ate a dog on it.
 
 I don't agree that using of Model/View leads to the less coding. I guess, that
-code would be large than with simple widget. From time to time I practice such
+code would be larger than with simple widget. From time to time I practice such
 simple lists without Model/View. And if I remember all correct it was twice. And
 tape in GIF editor is the second time. I don't see benefits of using Model/View
 here, possibly adding/removing frames would be faster with Model/View, but
