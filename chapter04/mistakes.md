@@ -83,4 +83,40 @@ This is not simple question use inheritance or composition. Think twice if you a
 going to use composition or `*.ui` file. Using of inheritance is not a mistake, but can
 save your time and nerves in the future, and eat time at the beginning. So it's my choice...
 
+## Model/View
+
+I was asked why I didn't use Model/View for implementing tape. It was simpler is my
+answer. I use controls on frames (checkbox). I know it's doable with view and custom
+delegate, but it's not a trivial task to have control on the item not in the
+edit mode. I did such tasks, I know what it is. It's just was simpler.
+
+Yes, I agree, model for frames on tape can be reused. I know that this is
+modern to use Model/View approach. But in this case scroll view with custom
+widget was simpler.
+
+I wrote a lot of models, custom views with custom delegates. I ate a dog on it.
+
+I don't agree that using of Model/View leads to the less coding. I guess, that
+code would be large than with simple widget. From time to time I practice such
+simple lists without Model/View. And if I remember all correct it was twice. And
+tape in GIF editor is the second time. I don't see benefits of using Model/View
+here, possibly adding/removing frames would be faster with Model/View, but
+simple code for custom view of frames on tape with controls outweighed the
+Model/View.
+
+And I can use `qss` to style my application, whereas with custom delegate
+it would not be possible.
+
+This question is most controversial for me...
+
+## QMovie
+
+Got suggestion to use `QMoview` instead of Magick++, as the GIF editor would be
+without dependencies and for novice it would be simpler to start with this example.
+
+But in this case I would not be able to save editied GIFs, and this example will
+become usual Qt example, that "can do nothing". I use this application for my own
+needs from time to time. I need to have simple GIF editor that can crop and remove
+unnecessary frames. I need it. And I wanted to show readers "real world" examples.
+
 [Back](../chapter03/impl.md) | [Contents](../README.md) | [Next](../links.md)
