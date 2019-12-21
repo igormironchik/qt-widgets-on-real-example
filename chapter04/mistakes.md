@@ -111,7 +111,7 @@ This question is most controversial for me...
 
 ## QMovie
 
-Got suggestion to use `QMoview` instead of Magick++, as the GIF editor would be
+Got suggestion to use `QMovie` instead of Magick++, as the GIF editor would be
 without dependencies and for novice it would be simpler to start with this example.
 
 But in this case I would not be able to save editied GIFs, and this example will
