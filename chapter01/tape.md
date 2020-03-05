@@ -12,7 +12,7 @@ where we will add FrameOnTape objects.
 
 So, as usuaul, let's have a look at class declarartion.
 
-```
+```cpp
 #ifndef GIF_EDITOR_TAPE_HPP_INCLUDED
 #define GIF_EDITOR_TAPE_HPP_INCLUDED
 
@@ -74,7 +74,7 @@ API is intuitive, it doesn't need an explanation, so let's look at the implement
 
 Private data class looks like.
 
-```
+```cpp
 //
 // TapePrivate
 //
@@ -106,7 +106,7 @@ a auxiliary member that will hold a pointer to the currently selected frame, and
 
 Trivial methods.
 
-```
+```cpp
 Tape::Tape( QWidget * parent )
 	:	QWidget( parent )
 	,	d( new TapePrivate( this ) )
@@ -150,7 +150,7 @@ Tape::clear()
 
 Just will say that indexes in our API start from 1. Let's look at addFrame() method.
 
-```
+```cpp
 void
 Tape::addFrame( const QImage & img )
 {
@@ -182,7 +182,7 @@ a new frame will be added the tape will grow in width.
 
 setCurrentFrame() is quite simple.
 
-```
+```cpp
 void
 Tape::setCurrentFrame( int idx )
 {
@@ -204,7 +204,7 @@ Tape::setCurrentFrame( int idx )
 And some magic in the removeFrame() method. I implemented it so when current frame deletes,
 a new one will become current, so we always will have selected frame.
 
-```
+```cpp
 void
 Tape::removeFrame( int idx )
 {

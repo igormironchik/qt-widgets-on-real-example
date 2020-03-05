@@ -10,7 +10,7 @@ I created a thumbnail of the central frame's image in the resize event handler. 
 can come very frequently, and do hard work here is not a good idea. To remind what was
 done let's have a look at the code.
 
-```
+```cpp
 void
 Frame::resizeEvent( QResizeEvent * e )
 {

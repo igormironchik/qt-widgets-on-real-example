@@ -12,7 +12,7 @@ clickable. I guess that this is enough for our application. Possibly we will nee
 additional in the future, possibly, but for the first attempt this is all that we need.
 Let declare a class of our frame.
 
-```
+```cpp
 #ifndef GIF_EDITOR_FRAME_HPP_INCLUDED
 #define GIF_EDITOR_FRAME_HPP_INCLUDED
 
@@ -74,7 +74,7 @@ private:
 
 With private data class all is simple, it's better to see one time than hear thousand times.
 
-```
+```cpp
 class FramePrivate {
 public:
 	FramePrivate( const QImage & img, Frame::ResizeMode mode,
@@ -109,7 +109,7 @@ The creation of a thumbnail is different for different resize modes of a frame. 
 we need to scale in both directions keeping the aspect ratio of the image, whereas for the fit to height
 mode we just need to scale to height keeping aspect ratio too. Let's have a look.
 
-```
+```cpp
 void
 FramePrivate::createThumbnail()
 {
@@ -145,7 +145,7 @@ FramePrivate::resized()
 
 Some methods' implementations of Frame class are quite simple and don't need an explanation.
 
-```
+```cpp
 Frame::Frame( const QImage & img, ResizeMode mode, QWidget * parent )
 	:	QWidget( parent )
 	,	d( new FramePrivate( img, mode, this ) )
@@ -191,7 +191,7 @@ Frame::sizeHint() const
 
 Painting needs just to draw a thumbnail in the center of the widget.
 
-```
+```cpp
 void
 Frame::paintEvent( QPaintEvent * )
 {
@@ -208,7 +208,7 @@ Frame::paintEvent( QPaintEvent * )
 We want an image to be resized automatically on resizing of widget. That is why I overrided
 resizeEvent().
 
-```
+```cpp
 void
 Frame::resizeEvent( QResizeEvent * e )
 {
@@ -222,7 +222,7 @@ Frame::resizeEvent( QResizeEvent * e )
 
 And mouseReleaseEvent() to notify about clicking on the frame.
 
-```
+```cpp
 void
 Frame::mouseReleaseEvent( QMouseEvent * e )
 {

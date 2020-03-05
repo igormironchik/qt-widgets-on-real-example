@@ -10,7 +10,7 @@ animation, and when all is done I will show the ready result.
 With Qt's stuff all is simple, I just dilute the code with
 QApplication::processEvents(), like.
 
-```
+```cpp
 //! Initialize tape.
 void initTape()
 {
@@ -29,7 +29,7 @@ of Magick++ functions. I decided to run these functions with QRunnable on
 QThreadPool. Magick++ can throw exceptions, so I declared the base class for all
 my runnables.
 
-```
+```cpp
 class RunnableWithException
 	:	public QRunnable
 {
@@ -48,7 +48,7 @@ protected:
 
 And let's look at the implementation of the readImages() as runnable object.
 
-```
+```cpp
 class ReadGIF final
 	:	public RunnableWithException
 {
@@ -80,7 +80,7 @@ private:
 
 Voila. And when I need to read GIF.
 
-```
+```cpp
 std::vector< Magick::Image > frames;
 
 ReadGIF read( &frames, fileName.toStdString() );
@@ -94,7 +94,7 @@ if( read.exception() )
 
 Where d->waitThreadPool() is.
 
-```
+```cpp
 //! Wait for thread pool.
 void waitThreadPool()
 {
@@ -109,7 +109,7 @@ I decided to disable all actions during such operations, even quit from the appl
 what if the user wants to exit from the application during opening? We can allow to do it on the close
 button in the window's title click.
 
-```
+```cpp
 void
 MainWindow::closeEvent( QCloseEvent * e )
 {

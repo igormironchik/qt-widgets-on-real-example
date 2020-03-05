@@ -2,7 +2,7 @@
 
 When video surface detects motion.
 
-```
+```cpp
 void
 MainWindow::motionDetected()
 {
@@ -24,7 +24,7 @@ MainWindow::motionDetected()
 
 We start to capture images from camera with configured interval.
 
-```
+```cpp
 void
 MainWindow::takeImage()
 {
@@ -49,14 +49,14 @@ MainWindow::takeImage()
 
 Where d->m_timer->timeout() connected to.
 
-```
+```cpp
 MainWindow::connect( m_timer, &QTimer::timeout,
 		q, &MainWindow::takeImage );
 ```
 
 And when there is no mo motion in the frame.
 
-```
+```cpp
 void
 MainWindow::noMoreMotion()
 {

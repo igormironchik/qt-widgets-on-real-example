@@ -11,7 +11,7 @@ etc. Let's have a look at this widget.
 
 Declaration.
 
-```
+```cpp
 #ifndef GIF_EDITOR_CROP_HPP_INCLUDED
 #define GIF_EDITOR_CROP_HPP_INCLUDED
 
@@ -73,14 +73,14 @@ API is simple, but let's look at what is under the hood.
 Crop rectangle will have handles to change the geometry of the rectangle. And in the code
 I defined a constant to store the size for it.
 
-```
+```cpp
 //! Size of the handle to change geometry of selected region.
 static const int c_handleSize = 15;
 ```
 
 Private data class.
 
-```
+```cpp
 class CropFramePrivate {
 public:
 	CropFramePrivate( CropFrame * parent, Frame * toObserve )
@@ -275,7 +275,7 @@ rectangles of the handles, you could understand it from their names.
 We will resize, move selection rectangle, and we don't want this rectangle to go out of
 frame boundary. And for this task we have two auxiliary methods.
 
-```
+```cpp
 QPoint
 CropFramePrivate::boundToAvailable( const QPoint & p ) const
 {
@@ -316,7 +316,7 @@ CropFramePrivate::boundLeftTopToAvailable( const QPoint & p ) const
 When the user moves the mouse cursor over the widget, different regions we need to override cursor
 to help the user understand what he can do. Auxiliary methods to override cursor.
 
-```
+```cpp
 void
 CropFramePrivate::checkAndOverrideCursor( Qt::CursorShape shape )
 {
@@ -399,7 +399,7 @@ CropFramePrivate::overrideCursor( const QPoint & pos )
 
 When user presses and moves handle selection rectangle should resize, so the method for it.
 
-```
+```cpp
 void
 CropFramePrivate::resize( const QPoint & pos )
 {
@@ -458,7 +458,7 @@ CropFramePrivate::resize( const QPoint & pos )
 We can draw a crop rectangle on the scaled frame, but for cropping we need to know rectangle
 to crop in the original frame's coordinates.
 
-```
+```cpp
 QRect
 CropFramePrivate::cropped( const QRect & full ) const
 {
@@ -499,7 +499,7 @@ to quickly look at working methods to develop on Qt's widgets. Let's go.
 
 The widget as is very simple with all these auxiliary methods, have a look.
 
-```
+```cpp
 CropFrame::CropFrame( Frame * parent )
 	:	QWidget( parent )
 	,	d( new CropFramePrivate( this, parent ) )
@@ -550,7 +550,7 @@ CropFrame::stop()
 I added to Frame class resized() signal to handle resizing and correctly
 resize selection region.
 
-```
+```cpp
 void
 CropFrame::frameResized()
 {
@@ -566,7 +566,7 @@ CropFrame::frameResized()
 
 Painting of our widget.
 
-```
+```cpp
 void
 CropFrame::paintEvent( QPaintEvent * )
 {
@@ -655,7 +655,7 @@ only this handle will be drawn and the mouse cursor will be overridden, like in 
 
 And mouse handling.
 
-```
+```cpp
 void
 CropFrame::mousePressEvent( QMouseEvent * e )
 {
@@ -762,14 +762,14 @@ CropFrame::leaveEvent( QEvent * e )
 
 In the View private data class I added pointer to CropFrame widget.
 
-```
+```cpp
 //! Crop.
 CropFrame * m_crop;
 ```
 
 And two slots to start and stop crop operation.
 
-```
+```cpp
 void
 View::startCrop()
 {
@@ -801,7 +801,7 @@ on top of it.
 
 To access crop region I added a method.
 
-```
+```cpp
 QRect
 View::cropRect() const
 {
@@ -819,7 +819,7 @@ Nothing more.
 We need menu and tool bar to start, finish and cancel crop operation,
 so in MainWindow's constructor we added.
 
-```
+```cpp
 d->m_crop = new QAction( QIcon( ":/img/transform-crop.png" ),
 	tr( "Crop" ), this );
 d->m_crop->setShortcut( tr( "Ctrl+C" ) );
@@ -856,7 +856,7 @@ addToolBar( Qt::LeftToolBarArea, editToolBar );
 
 Reaction on triggering crop action is simple.
 
-```
+```cpp
 void
 MainWindow::crop( bool on )
 {
@@ -881,7 +881,7 @@ MainWindow::crop( bool on )
 
 Where.
 
-```
+```cpp
 //! Enable file actions.
 void enableFileActions( bool on = true )
 {
@@ -896,7 +896,7 @@ void enableFileActions( bool on = true )
 
 Cancelling and applying crop operation.
 
-```
+```cpp
 void
 MainWindow::cancelEdit()
 {

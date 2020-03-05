@@ -6,7 +6,7 @@ is in the main window private data class. We need to create an object of View cl
 and set it as a central widget of the main window, and again the place for it
 is main window private data class. So let's look at it.
 
-```
+```cpp
 class MainWindowPrivate {
 public:
 	MainWindowPrivate( MainWindow * parent )
@@ -35,7 +35,7 @@ We will work in the future with a sequence of Magick::Image objects for editing,
 so we have a data member for it. When GIf opened and we want to open a new one
 we should clear the current view, so let's look at the clearView() method.
 
-```
+```cpp
 void
 MainWindowPrivate::clearView()
 {
@@ -49,7 +49,7 @@ No comments.
 
 Conversion from Magick::Image to QImage is simple as well.
 
-```
+```cpp
 QImage
 MainWindowPrivate::convert( const Magick::Image & img )
 {
@@ -79,7 +79,7 @@ MainWindowPrivate::convert( const Magick::Image & img )
 Ok. We have empty openGif() slot in the MainWindow class. And to open GIF we should
 implement it.
 
-```
+```cpp
 void
 MainWindow::openGif()
 {

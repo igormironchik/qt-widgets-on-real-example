@@ -7,7 +7,7 @@ tape, that we will set as a central widget of our main window.
 
 Declaration.
 
-```
+```cpp
 #ifndef GIF_EDITOR_VIEW_HPP_INCLUDED
 #define GIF_EDITOR_VIEW_HPP_INCLUDED
 
@@ -56,7 +56,7 @@ private:
 
 No magic at all, all is simple. Private data class.
 
-```
+```cpp
 class ViewPrivate {
 public:
 	ViewPrivate( View * parent )
@@ -80,7 +80,7 @@ with an empty image.
 
 You will not believe how implementation is simple. And again Qt rocks. Look.
 
-```
+```cpp
 View::View( QWidget * parent )
 	:	QWidget( parent )
 	,	d( new ViewPrivate( this ) )

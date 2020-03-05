@@ -2,7 +2,7 @@
 
 We created basic main window, let's have a look at it. We need a main() function to start the application.
 
-```
+```cpp
 // Qt include.
 #include <QApplication>
 #include <QTranslator>

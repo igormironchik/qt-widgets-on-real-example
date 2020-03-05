@@ -4,7 +4,7 @@ We have the video surface that can be used as viewfinder for QCamera,
 we have the view that will display stream from the camera, now we need
 to initialize the camera.
 
-```
+```cpp
 void
 MainWindowPrivate::initCamera()
 {
@@ -64,7 +64,7 @@ We connected to QCamera::statusChanged signal to set a resolution of the camera,
 need to do it exactly in QCamera::LoadedStatus state, as only there we can ask the
 camera for supported viewfinder settings.
 
-```
+```cpp
 void
 MainWindow::camStatusChanged( QCamera::Status st )
 {
@@ -102,7 +102,7 @@ MainWindow::camStatusChanged( QCamera::Status st )
 
 On any error in the camera we do.
 
-```
+```cpp
 void
 MainWindow::cameraError()
 {
@@ -117,7 +117,7 @@ MainWindow::cameraError()
 
 Where d->m_view is our view. And.
 
-```
+```cpp
 void
 MainWindowPrivate::stopCamera()
 {

@@ -30,7 +30,7 @@ frames, so the threshold is configurable.
 
 Declaration.
 
-```
+```cpp
 #ifndef SECURITYCAM_FRAMES_HPP_INCLUDED
 #define SECURITYCAM_FRAMES_HPP_INCLUDED
 
@@ -148,7 +148,7 @@ private:
 This is a formalization in C\+\+ delcaration of what was said above. Some methods are
 trivial.
 
-```
+```cpp
 static const int c_noFramesTimeout = 3000;
 
 //
@@ -250,7 +250,7 @@ Frames::applyTransform( bool on )
 
 The main work is done in present() method.
 
-```
+```cpp
 bool
 Frames::present( const QVideoFrame & frame )
 {
@@ -304,7 +304,7 @@ try to access destroyed memory.
 
 Motion detection is made with help of OpenCV and is quite simple, look.
 
-```
+```cpp
 inline cv::Mat QImageToCvMat( const QImage & inImage )
 {
 	switch ( inImage.format() )
@@ -383,7 +383,7 @@ Frames::detectMotion( const QImage & key, const QImage & image )
 
 And auxiliary trivial methods.
 
-```
+```cpp
 QList< QVideoFrame::PixelFormat >
 Frames::supportedPixelFormats( QAbstractVideoBuffer::HandleType type ) const
 {

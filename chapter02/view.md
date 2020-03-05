@@ -10,7 +10,7 @@ that will display the current frame.
 
 So let's do such a view finder.
 
-```
+```cpp
 #ifndef SECURITYCAM_VIEW_HPP_INCLUDED
 #define SECURITYCAM_VIEW_HPP_INCLUDED
 
@@ -58,7 +58,7 @@ private:
 
 Private data class.
 
-```
+```cpp
 class ViewPrivate {
 public:
 	explicit ViewPrivate( View * parent )
@@ -82,7 +82,7 @@ background, where we will just copy frame and set resized flag to false, and wil
 of the widget. GUI part of the view will draw a new frame when it can do it, so we will not have a
 long queue of frames to draw, we will quickly process this queue. Let's look.
 
-```
+```cpp
 View::View( QWidget * parent )
 	:	QWidget( parent )
 	,	d( new ViewPrivate( this ) )

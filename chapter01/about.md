@@ -4,7 +4,7 @@ And the last step. Let's add Help menu with about dialogues.
 
 In the MainWindow constructor.
 
-```
+```cpp
 auto help = menuBar()->addMenu( tr( "&Help" ) );
 help->addAction( QIcon( ":/img/icon_22x22.png" ), tr( "About" ),
 	this, &MainWindow::about );
@@ -14,7 +14,7 @@ help->addAction( QIcon( ":/img/qt.png" ), tr( "About Qt" ),
 
 And slots.
 
-```
+```cpp
 void
 MainWindow::about()
 {

@@ -10,7 +10,7 @@ Qt has ready to use class QMainWindow which we can derive from and implement nee
 
 Let's inherit from QMainWindow to have the ability to implement our functionality. We will start from basics, in the mainwindow.hpp we have:
 
-```
+```cpp
 #ifndef GIF_EDITOR_MAINWINDOW_HPP_INCLUDED
 #define GIF_EDITOR_MAINWINDOW_HPP_INCLUDED
 
@@ -55,7 +55,7 @@ compile time, it hides details of implementation from interface.
 
 Implementation at this point is very simple (mainwindow.cpp):
 
-```
+```cpp
 // GIF editor include.
 #include "mainwindow.hpp"
 
@@ -95,7 +95,7 @@ Ok. We have the skeleton of our main window. Let's add File menu with open, save
 want to implement GIF editor and without such basic functions our application will cost nothing. First of all,
 let's define slots in MainWindow class for these actions.
 
-```
+```cpp
 private slots:
 	//! Open GIF.
 	void openGif();
@@ -111,7 +111,7 @@ QMainWindow has a menu bar, status bar, central widget, etc. For such actions it
 as in almost all desktop applications. In the constructor of MainWindow we will add code to create the File
 menu and fill it with actions. Let's see:
 
-```
+```cpp
 MainWindow::MainWindow()
 	:	d( new MainWindowPrivate( this ) )
 {
@@ -137,7 +137,7 @@ I set title of the main window and created File menu with actions and separators
 
 The first slot that we will implement is quit from the editor and empty implementations of other slots.
 
-```
+```cpp
 void
 MainWindow::openGif()
 {
@@ -176,7 +176,7 @@ QWidget, the parent of QMainWindow, has a mechanism to read/set a flag if someth
 In our editor we will set this flag on user's changes and clear it on saving. For the future I added in data
 class member m_currentGif of QString type, where I will store the full path to the current GIF image.
 
-```
+```cpp
 	//! Current file name.
 	QString m_currentGif;
 	//! Parent.
@@ -187,14 +187,14 @@ class member m_currentGif of QString type, where I will store the full path to t
 Great. But application can be closed with the close button in the window's header. And it's a good idea to invoke
 MainWindow::quit() slot in handler of this event. For this case we will override closeEvent(), so in MainWindow:
 
-```
+```cpp
 protected:
 	void closeEvent( QCloseEvent * e ) override;
 ```
 
 And implementation:
 
-```
+```cpp
 void
 MainWindow::closeEvent( QCloseEvent * e )
 {

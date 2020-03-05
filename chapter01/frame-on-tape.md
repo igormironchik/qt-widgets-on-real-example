@@ -13,7 +13,7 @@ reusing of the code, especially if this code written not by us.
 
 The declaration of the new class looks like.
 
-```
+```cpp
 #ifndef GIF_EDITOR_FRAMEONTAPE_HPP_INCLUDED
 #define GIF_EDITOR_FRAMEONTAPE_HPP_INCLUDED
 
@@ -79,7 +79,7 @@ ability to check if this frame is checked.
 
 Implementation really very simple. Look at private data class.
 
-```
+```cpp
 class FrameOnTapePrivate {
 public:
 	FrameOnTapePrivate( const QImage & img, int counter, FrameOnTape * parent )
@@ -116,7 +116,7 @@ public:
 
 We declared setCurrent() method as we will use this code more than once.
 
-```
+```cpp
 void
 FrameOnTapePrivate::setCurrent( bool on )
 {
@@ -133,7 +133,7 @@ We just changing a frame's style to indicate that this frame is currently select
 
 And the implementation of the class is so simple that even doesn't need any comments.
 
-```
+```cpp
 FrameOnTape::FrameOnTape( const QImage & img, int counter, QWidget * parent )
 	:	QFrame( parent )
 	,	d( new FrameOnTapePrivate( img, counter, this ) )
