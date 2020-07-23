@@ -116,4 +116,4 @@ become usual Qt example, that "can do nothing". I use this application for my ow
 needs from time to time. I need to have a simple GIF editor that can crop and remove
 unnecessary frames. I need it. And I wanted to show readers "real world" examples.
 
-[Back](../chapter03/impl.md) | [Contents](../README.md) | [Next](../links.md)
+[Back](../chapter03/impl.md) | [Contents](../README.md) | [Next](../chapter05/intro.md)
