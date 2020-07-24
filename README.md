@@ -35,7 +35,7 @@ Free Documentation License".
    * [Implementation](chapter03/impl.md)
 5. [Chapter 4 - mistakes handling](chapter04/mistakes.md)
 6. [Chapter 5 - QML](chapter05/intro.md)
-   * [C\+\+ and QML](chapter05/c++-qml.md)
+   * [C++ and QML](chapter05/c++-qml.md)
    * [Board](chapter05/board.md)
    * [Main window](chapter05/mainwindow.md)
    * [Dialogues](chapter05/dialog.md)
