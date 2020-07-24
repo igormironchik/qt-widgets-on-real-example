@@ -2,7 +2,7 @@
 
 To draw chess board I will use Grid QML element with Repeater with model from C\+\+. Each place
 on the board is a Cell item. Cell is a square that can be white and black colors with image
-of figure on it, and that can be highlightes with another colors to indicate possible moves, hits
+of figure on it, and that can be highlighted with another colors to indicate possible moves, hits
 and check state. Cell item should send clicked() signal when it's clicked by user. And in QML
 is very easy to implement such cell.
 

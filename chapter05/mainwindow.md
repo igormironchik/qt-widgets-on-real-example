@@ -108,7 +108,8 @@ ApplicationWindow {
 ```
 
 Line by line. As you can see I import my own ChessSignals type. This is needed to know on QML
-side about user defined type, in our case about Signals bridge.
+side about user defined type, in our case about Signals bridge. You will understand meaning of this
+line when will see the main() function from C\+\+. But let be step by step.
 
 We implement our top window with ApplicationWindow element. I placed Rectangle in the window,
 where placed undo button, the board and a label of the color of current move team.
