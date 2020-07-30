@@ -283,7 +283,7 @@ usefull to rotate the board every time for each player. For this I have Rotation
 and some stuff for synchronization of the rotation animation.
 
 The board starts from the row of letters from A to H, and column of numbers. Cells are placed
-with Grid element, Repeatre and the model on C\+\+ side. And again the column of numbers,
+with Grid element, Repeater and the model on C\+\+ side. And again the column of numbers,
 and the row of letters. Voila, this is a board for the chess game written with QML.
 
 It's very easy to write such UI with animation on QML, and bindings of properties help
