@@ -497,7 +497,7 @@ when they were needed. Developing is an iterative process. With some experience 
 will come to it, but I believe that you are an experienced C++ developer and just want
 to quickly look at working methods to develop on Qt's widgets. Let's go.
 
-The widget as is very simple with all these auxiliary methods, have a look.
+The widget is very simple with all these auxiliary methods, have a look.
 
 ```cpp
 CropFrame::CropFrame( Frame * parent )
