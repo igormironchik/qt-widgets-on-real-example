@@ -15,7 +15,7 @@ library for reading and saving configurations. It places on GitHub
 SecurityCam is an application that connects to USB camera and tries to
 detect motions in the frame, as soon as motion is detected camera starts
 to capture images and store them in the configured folder with
-yyy/MM/dd hierarchy. SecurityCam can do clean at the configured time
+yyyy/MM/dd hierarchy. SecurityCam can do clean at the configured time
 and delete folders with images that stored more than N days.
 
 The window of the application displays stream from the camera and on closing
