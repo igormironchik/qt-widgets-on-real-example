@@ -4,7 +4,7 @@
 
 Each Qt widgets application should have one or more top-level widgets. For GIF editor we need one top-level window
 where we will display frames, current frame, toolbar with actions for editing, a menu bar with different actions.
-Qt has ready to use class QMainWindow which we can derive from and implement needed for our functionality.
+Qt has ready to use class QMainWindow which we can derive from and implement needed for us functionality.
 
 ## Inheritance
 
@@ -174,7 +174,7 @@ MainWindow::quit()
 
 QWidget, the parent of QMainWindow, has a mechanism to read/set a flag if something was changed in. Why not?
 In our editor we will set this flag on user's changes and clear it on saving. For the future I added in data
-class member m_currentGif of QString type, where I will store the full path to the current GIF image.
+class member m\_currentGif of QString type, where I will store the full path to the current GIF image.
 
 ```cpp
 	//! Current file name.
