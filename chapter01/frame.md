@@ -221,7 +221,7 @@ Frame::resizeEvent( QResizeEvent * e )
 ```
 
 In this resize event handler I have possible issue. Think on this method. Explanations you can
-find in [Chapter 4](../chapter04/mistakes.md)
+find in [Chapter 4](../chapter04/mistakes.md).
 
 And mouseReleaseEvent() to notify about clicking on the frame.
 
