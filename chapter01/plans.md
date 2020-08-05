@@ -5,16 +5,16 @@ of GIF at the bottom, frames should be checkable with checkbox, so the user will
 from the GIF. And resized to fit available space current frame in the centre of the main window. Frames
 should be clickable, so the user can select any frame. And for first Alpha version of the application
 I want to implement crop function. The crop will be accessible from toolbar, and in this mode user
-should be able to draw a rectangle to crop to, and on pressing Enter crop should do the job for all
+should be able to draw a rectangle to crop to, and on pressing "Enter" crop should do the job for all
 frames.
 
 That's all. Sounds not so complicated, let's do it. And let's start from creating a widget
 that will represent a frame in the tape of frames.
 
-I wrote the code for the next five chapters before continuing writing this book because it's
+I wrote the code for the next five sections before continuing writing this book because it's
 very difficult to keep in mind all possible issues that could be during coding. So I wrote
 the code, debugged it, checked, and started to write an overview of my adventure. After reading
-next five chapters the editor will open GIF images, the user will see the tape with clickable
+next five sections the editor will open GIF images, the user will see the tape with clickable
 frames, and on clicking in the centre of the window will be displayed selected frame. Believe me, it looks
 nice, and I spend only half a day on developing it, that is why I love Qt so much.
 

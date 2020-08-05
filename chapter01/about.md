@@ -2,7 +2,7 @@
 
 And the last step. Let's add Help menu with about dialogues.
 
-In the MainWindow constructor.
+In the `MainWindow` constructor.
 
 ```cpp
 auto help = menuBar()->addMenu( tr( "&Help" ) );

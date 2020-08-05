@@ -1,14 +1,14 @@
 # Tape
 
-Ok, now we have FrameOnTape class, but this class can display a single frame.
+Ok, now we have `FrameOnTape` class, but this class can display a single frame.
 But animated GIF has several frames. And we should display all frames in a sequence -
 tape. The tape should be a horizontally scrollable widget with all available frames in
-the GIF. Scrollable? This is simple, in Qt we have QScrollArea class, and we just need
+the GIF. Scrollable? This is simple, in Qt we have `QScrollArea` class, and we just need
 a widget that should have ability to add, remove frames on it, and should grow in width
 on adding new frames, as well as it should reduce its width on removing a frame.
 
-Let's reuse as much code as possible. We just need a QWidget with QHBoxLayout
-where we will add FrameOnTape objects.
+Let's reuse as much code as possible. We just need a `QWidget` with `QHBoxLayout`
+where we will add `FrameOnTape` objects.
 
 So, as usuaul, let's have a look at class declarartion.
 
@@ -101,7 +101,7 @@ public:
 }; // class TapePrivate
 ```
 
-We need access to all frames, so we have a data member of type QList\< FrameOnTape \>,
+We need access to all frames, so we have a data member of type `QList< FrameOnTape >`,
 a auxiliary member that will hold a pointer to the currently selected frame, and our layout.
 
 Trivial methods.
@@ -148,7 +148,7 @@ Tape::clear()
 }
 ```
 
-Just will say that indexes in our API start from 1. Let's look at addFrame() method.
+Just will say that indexes in our API start from 1. Let's look at `addFrame()` method.
 
 ```cpp
 void
@@ -176,11 +176,11 @@ Tape::addFrame( const QImage & img )
 }
 ```
 
-We created new FrameOnTape object, added it to the list and to the layout. Connected
-clicked() signal to do stuff for the current frame. And resized the entire widget. So, when
+We created new `FrameOnTape` object, added it to the list and to the layout. Connected
+`clicked()` signal to do stuff for the current frame. And resized the entire widget. So, when
 a new frame will be added the tape will grow in width.
 
-setCurrentFrame() is quite simple.
+`setCurrentFrame()` is quite simple.
 
 ```cpp
 void
@@ -201,7 +201,7 @@ Tape::setCurrentFrame( int idx )
 }
 ```
 
-And some magic in the removeFrame() method. I implemented it so when current frame deletes,
+And some magic in the `removeFrame()` method. I implemented it so when current frame deletes,
 a new one will become current, so we always will have selected frame.
 
 ```cpp

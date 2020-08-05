@@ -7,8 +7,8 @@ to remove some frames from the GIF, just deselect some frames, save file, and vo
 frame on the tape should have a counter, indicating the position of the frame on the tape.
 
 Sounds like we can do it with standard widgets and layouts. We can create a widget, inherited
-from QFrame to have a border, QCheckBox for checkbox, QLabel for position indicator,
-and QVBoxLayout and QHBoxLayout for layout. Amazing, there is nothing better than
+from `QFrame` to have a border, `QCheckBox` for checkbox, `QLabel` for position indicator,
+and `QVBoxLayout` and `QHBoxLayout` for layout. Amazing, there is nothing better than
 reusing of the code, especially if this code written not by us.
 
 The declaration of the new class looks like.
@@ -114,7 +114,7 @@ public:
 }; // class FrameOnTapePrivate
 ```
 
-We declared setCurrent() method as we will use this code more than once.
+We declared `setCurrent()` method as we will use this code more than once.
 
 ```cpp
 void

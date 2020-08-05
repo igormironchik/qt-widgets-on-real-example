@@ -1,6 +1,6 @@
 # First launch of application
 
-We created basic main window, let's have a look at it. We need a main() function to start the application.
+We created basic main window, let's have a look at it. We need a `main()` function to start the application.
 
 ```cpp
 // Qt include.
@@ -37,8 +37,8 @@ int main( int argc, char ** argv )
 }
 ```
 
-We created QApplication object, an icon of our application, translator, that will load translation according to
-system's locale, and created MainWindow object on the stack. Set default size, and invoked show() method. Voila,
-now we need to start application's event loop, what app.exec() do.
+We created `QApplication` object, an icon of our application, translator, that will load translation according to
+system's locale, and created `MainWindow` object on the stack. Set default size, and invoked `show()` method. Voila,
+now we need to start application's event loop, what `app.exec()` do.
 
 [Back](mainwindow-basics.md) | [Contents](../README.md) | [Next](plans.md)

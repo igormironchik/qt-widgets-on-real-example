@@ -547,7 +547,7 @@ CropFrame::stop()
 }
 ```
 
-I added to Frame class resized() signal to handle resizing and correctly
+I added to `Frame` class `resized()` signal to handle resizing and correctly
 resize selection region.
 
 ```cpp
@@ -760,7 +760,7 @@ CropFrame::leaveEvent( QEvent * e )
 
 ## Integrating crop frame into view
 
-In the View private data class I added pointer to CropFrame widget.
+In the `View` private data class I added pointer to `CropFrame` widget.
 
 ```cpp
 //! Crop.
@@ -817,7 +817,7 @@ Nothing more.
 ## Cropping
 
 We need menu and tool bar to start, finish and cancel crop operation,
-so in MainWindow's constructor we added.
+so in `MainWindow`'s constructor we added.
 
 ```cpp
 d->m_crop = new QAction( QIcon( ":/img/transform-crop.png" ),

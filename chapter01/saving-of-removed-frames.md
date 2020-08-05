@@ -3,7 +3,7 @@
 We can open GIF, we can navigate through the frames, we can uncheck some frames.
 Let's do saving of GIF with regards to unchecked frames. This is a basic of any
 GIF editor. First of all we should notify user that file was changed when he
-checks/unchecks frames. For it we should connect to Tape's checkStateChanged()
+checks/unchecks frames. For it we should connect to `Tape`'s `checkStateChanged()`
 signal. Let's do it in the constructor of MainWindow.
 
 ```cpp
@@ -11,14 +11,14 @@ connect( d->m_view->tape(), &Tape::checkStateChanged,
 		this, &MainWindow::frameChecked );
 ```
 
-I changed a little checkStateChanged() signal, so it looks like.
+I changed a little `checkStateChanged()` signal, so it looks like.
 
 ```cpp
 //! Frame checked/unchecked.
 void checkStateChanged( int idx, bool checked );
 ```
 
-MainWindow's frameChecked() slot is simple.
+`MainWindow`'s `frameChecked()` slot is simple.
 
 ```cpp
 void
@@ -28,7 +28,7 @@ MainWindow::frameChecked( int, bool )
 }
 ```
 
-We just notifying a user that GIF was changed. Let's have a look at saveGifAs()
+We just notifying a user that GIF was changed. Let's have a look at `saveGifAs()`
 slot
 
 ```cpp
@@ -54,7 +54,7 @@ MainWindow::saveGifAs()
 }
 ```
 
-So the main work is done in saveGif() slot.
+So the main work is done in `saveGif()` slot.
 
 ```cpp
 void
@@ -94,7 +94,7 @@ MainWindow::saveGif()
 ```
 
 We just iterating through the frames and checking if they checked, saving all checked frames to the GIF,
-and if all is ok we updating UI. I added a new method to the Tape class to simplify this process.
+and if all is ok we updating UI. I added a new method to the `Tape` class to simplify this process.
 
 ```cpp
 void
@@ -119,7 +119,7 @@ Tape::removeUnchecked()
 
 We just removing unchecked frames and updating counter.
 
-To be more user friendly I changed a little openGif() slot.
+To be more user friendly I changed a little `openGif()` slot.
 
 ```cpp
 void

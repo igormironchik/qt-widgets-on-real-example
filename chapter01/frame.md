@@ -4,7 +4,7 @@
 
 Frame... This is an unit of GIF image. We need a thumbnail frame on the tape to display
 a sequence of frames in GIF, and a bigger one to display currently selected frame. The task
-of the frame is to display image, so why not to have one class for both cases? Hm, why not?
+of the frame is to display image, so why not to have one class for both cases? Hmm, why not?
 But for the current frame we need the image to be scaled to the size of the available area with keeping
 aspect ratio, whereas for the frame on the tape we need an image scaled to the height of the tape.
 The image on the frame should automatically resize on parent resizing, and it should be
@@ -143,7 +143,7 @@ FramePrivate::resized()
 }
 ```
 
-Some methods' implementations of Frame class are quite simple and don't need an explanation.
+Some methods' implementations of `Frame` class are quite simple and don't need an explanation.
 
 ```cpp
 Frame::Frame( const QImage & img, ResizeMode mode, QWidget * parent )
@@ -206,7 +206,7 @@ Frame::paintEvent( QPaintEvent * )
 ```
 
 We want an image to be resized automatically on resizing of widget. That is why I overrided
-resizeEvent().
+`resizeEvent()`.
 
 ```cpp
 void
@@ -223,7 +223,7 @@ Frame::resizeEvent( QResizeEvent * e )
 In this resize event handler I have possible issue. Think on this method. Explanations you can
 find in [Chapter 4](../chapter04/mistakes.md).
 
-And mouseReleaseEvent() to notify about clicking on the frame.
+And `mouseReleaseEvent()` to notify about clicking on the frame.
 
 ```cpp
 void

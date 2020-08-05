@@ -1,7 +1,7 @@
 # View
 
 Now we have everything to display GIF, we just need to combine all together. We
-have Frame class that will display the current frame, we have Tape class that will
+have `Frame` class that will display the current frame, we have `Tape` class that will
 display tape of frames. We need a widget that will combine the current frame with
 tape, that we will set as a central widget of our main window.
 
@@ -128,9 +128,9 @@ View::frameSelected( int idx )
 }
 ```
 
-This is really simple. Now we just need to create an object of View class and set it
+This is really simple. Now we just need to create an object of `View` class and set it
 as a central widget to the main window. UI part is ready to display a GIF image. And in the next
-chapter we will open GIF with Magick++ and use API of our UI classes to set the
+section we will open GIF with Magick++ and use API of our UI classes to set the
 sequence of frames.
 
 [Back](tape.md) | [Contents](../README.md) | [Next](reading.md)
