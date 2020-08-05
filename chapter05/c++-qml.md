@@ -8,11 +8,11 @@ more. We need to handle objects of figures in the memory, make some checks befor
 And this is the business logic of the game, that I suggest to write in C\+\+.
 
 Both worlds can speak each other with signals/slots. And for placing figures on the board
-we can use model, usual QAbstractListModel.
+we can use model, usual `QAbstractListModel`.
 
 I will not list tonns of the C\+\+ code of business logic in this chapter, I want to show
-QML usage only. Just a few words about C\+\+ implementation. I have Board class, this is a model
-of figures on the board. I have hierarchy of chess figures. I have Game class to implement
-game logic, and Signals class, that is a bridge of signals between C\+\+ and QML.
+QML usage only. Just a few words about C\+\+ implementation. I have `Board` class, this is a model
+of figures on the board. I have hierarchy of chess figures. I have `Game` class to implement
+game logic, and `Signals` class, that is a bridge of signals between C\+\+ and QML.
 
 [Back](intro.md) | [Contents](../README.md) | [Next](board.md)

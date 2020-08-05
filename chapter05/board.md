@@ -1,9 +1,9 @@
 # Board
 
-To draw chess board I will use Grid QML element with Repeater with model from C\+\+. Each place
-on the board is a Cell item. Cell is a square that can be white and black colors with image
+To draw chess board I will use `Grid` QML element with `Repeater` with model from C\+\+. Each place
+on the board is a `Cell` item. `Cell` is a square that can be white and black colors with image
 of figure on it, and that can be highlighted with another colors to indicate possible moves, hits
-and check state. Cell item should send clicked() signal when it's clicked by user. And in QML
+and check state. `Cell` item should send `clicked()` signal when it's clicked by user. And in QML
 is very easy to implement such cell.
 
 ```qml
@@ -71,12 +71,12 @@ Item {
 }
 ```
 
-As you can see I use Rectangle element to draw the cell and unvisible by default rectangles
-for highlighting. For drawing chess figure I use Image QML element, that a little smaller then cell
-and centered in it. And for mouse handling I have MouseArea. It's very simple, isn't it? Imagine
+As you can see I use `Rectangle` element to draw the cell and unvisible by default rectangles
+for highlighting. For drawing chess figure I use `Image` QML element, that a little smaller then cell
+and centered in it. And for mouse handling I have `MouseArea`. It's very simple, isn't it? Imagine
 how much code you would write in C\+\+ for such item.
 
-Ok, we have the Cell item and we need to place 8x8 cells on the square board. And we want to show labels
+Ok, we have the `Cell` item and we need to place 8x8 cells on the square board. And we want to show labels
 of columns and rows.
 
 ```qml
@@ -279,11 +279,11 @@ Rectangle {
 ```
 
 The board will rotate after each move. This game is designed for two players, and it's very
-usefull to rotate the board every time for each player. For this I have Rotation and PropertyAnimation,
+usefull to rotate the board every time for each player. For this I have `Rotation` and `PropertyAnimation`,
 and some stuff for synchronization of the rotation animation.
 
 The board starts from the row of letters from A to H, and column of numbers. Cells are placed
-with Grid element, Repeater and the model on C\+\+ side. And again the column of numbers,
+with `Grid` element, `Repeater` and the model on C\+\+ side. And again the column of numbers,
 and the row of letters. Voila, this is a board for the chess game written with QML.
 
 It's very easy to write such UI with animation on QML, and bindings of properties help
@@ -297,7 +297,7 @@ transform: Rotation {
 }
 ```
 
-I just bind angle property to rot.angle, where rot is a id of our Rotation of the board.
+I just bind `angle` property to `rot.angle`, where `rot` is a id of our `Rotation` of the board.
 This is amazing instrument in QML!
 
 [Back](c++-qml.md) | [Contents](../README.md) | [Next](mainwindow.md)

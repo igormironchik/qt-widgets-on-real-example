@@ -1,6 +1,6 @@
 # Start of the application.
 
-Just main() function from the C\+\+.
+Just `main()` function from the C\+\+.
 
 ```cpp
 // Qt include.
@@ -58,8 +58,8 @@ int main( int argc, char ** argv )
 }
 ```
 
-To start QML application I use QQmlApplicationEngine. Set all properties and registered user defined
-types, defined Board, Signals and Game objects. Loaded main window's QML file with
+To start QML application I use `QQmlApplicationEngine`. Set all properties and registered user defined
+types, defined `Board`, `Signals` and `Game` objects. Loaded main window's QML file with
 
 ```cpp
 engine.load( QUrl( "qrc:/qml/main.qml" ) );

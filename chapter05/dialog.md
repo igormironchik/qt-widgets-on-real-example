@@ -87,7 +87,7 @@ Dialog {
 ```
 
 Do you need any explanations? It's quite simple. This dialog set figure property that will be used
-in the main window's QML code and will be sent to the C\+\+ side. And Chess is my Signals object named
-Chess imported with `import ChessSignals 1.0`.
+in the main window's QML code and will be sent to the C\+\+ side. And `Chess` is my `Signals` object named
+`Chess` imported with `import ChessSignals 1.0`.
 
 [Back](mainwindow.md) | [Contents](../README.md) | [Next](start.md)
