@@ -47,7 +47,7 @@ MainWindow::takeImage()
 }
 ```
 
-Where d->m_timer->timeout() connected to.
+Where `d->m_timer->timeout()` connected to.
 
 ```cpp
 MainWindow::connect( m_timer, &QTimer::timeout,
@@ -81,7 +81,7 @@ MainWindow::stopRecording()
 }
 ```
 
-Where d->m_stopTimer->timeout() connected to MainWindow::stopRecording().
+Where `d->m_stopTimer->timeout()` connected to `MainWindow::stopRecording()`.
 
 Thus, we will have pictures of the attackers on the protected area.
 

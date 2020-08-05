@@ -1,6 +1,6 @@
 # Camera
 
-We have the video surface that can be used as viewfinder for QCamera,
+We have the video surface that can be used as viewfinder for `QCamera`,
 we have the view that will display stream from the camera, now we need
 to initialize the camera.
 
@@ -55,13 +55,13 @@ MainWindowPrivate::initCamera()
 }
 ```
 
-m_cfg.camera() is saved device name configured in the options dialog, when the application
+`m_cfg.camera()` is saved device name configured in the options dialog, when the application
 started it reads configuration and initializes camera, we just are looking for saved
-camera in the system, and if found allocating new QCamera, QCameraImageCapture objects,
-set view finder - our video surface (m_frames).
+camera in the system, and if found allocating new `QCamera`, `QCameraImageCapture` objects,
+set view finder - our video surface (`m_frames`).
 
-We connected to QCamera::statusChanged signal to set a resolution of the camera, we
-need to do it exactly in QCamera::LoadedStatus state, as only there we can ask the
+We connected to `QCamera::statusChanged` signal to set a resolution of the camera, we
+need to do it exactly in `QCamera::LoadedStatus` state, as only there we can ask the
 camera for supported viewfinder settings.
 
 ```cpp
@@ -115,7 +115,7 @@ MainWindow::cameraError()
 }
 ```
 
-Where d->m_view is our view. And.
+Where `d->m_view` is our view. And.
 
 ```cpp
 void

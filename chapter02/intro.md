@@ -1,7 +1,7 @@
 # Chapter 2
 
-In this chapter I will show how to work with QCamera, QAbstractVideoSurface.
-How to detect motion with OpenCV, capture with QCamera frames and store them
+In this chapter I will show how to work with `QCamera`, `QAbstractVideoSurface`.
+How to detect motion with OpenCV, capture with `QCamera` frames and store them
 in some place on the disk. This chapter is based on the real project SecurityCam
 that places on GitHub [https://github.com/igormironchik/security-cam](https://github.com/igormironchik/security-cam)
 
