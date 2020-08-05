@@ -1,14 +1,14 @@
 # Implementation
 
-Long Magick++ operations like readImages(), coalesceImages(),
-writeImages() can longs very much. And during these operations and another UI
+Long Magick++ operations like `readImages()`, `coalesceImages()`,
+`writeImages()` can longs very much. And during these operations and another UI
 preparations I'd like to show busy animation. I moved the view of the application to the
-QStackedWidget, that was set as a central widget of QMainWindow, and in this stacked widget
+`QStackedWidget`, that was set as a central widget of `QMainWindow`, and in this stacked widget
 I added a page with busy animation. During long operations I will show the page with
 animation, and when all is done I will show the ready result.
 
 With Qt's stuff all is simple, I just dilute the code with
-QApplication::processEvents(), like.
+`QApplication::processEvents()`, like.
 
 ```cpp
 //! Initialize tape.
@@ -25,8 +25,8 @@ void initTape()
 ```
 
 But Magick++ operation should work in separate thread as we can't change the code
-of Magick++ functions. I decided to run these functions with QRunnable on
-QThreadPool. Magick++ can throw exceptions, so I declared the base class for all
+of Magick++ functions. I decided to run these functions with `QRunnable` on
+`QThreadPool`. Magick++ can throw exceptions, so I declared the base class for all
 my runnables.
 
 ```cpp
@@ -46,7 +46,7 @@ protected:
 }; // class RunnableWithException
 ```
 
-And let's look at the implementation of the readImages() as runnable object.
+And let's look at the implementation of the `readImages()` as runnable object.
 
 ```cpp
 class ReadGIF final
@@ -92,7 +92,7 @@ if( read.exception() )
 	std::rethrow_exception( read.exception() );
 ```
 
-Where d->waitThreadPool() is.
+Where `d->waitThreadPool()` is.
 
 ```cpp
 //! Wait for thread pool.
@@ -130,7 +130,7 @@ MainWindow::closeEvent( QCloseEvent * e )
 }
 ```
 
-Where d->m_busyFlag is a bool that I set to true when showing busy animation.
+Where `d->m_busyFlag` is a bool that I set to true when showing busy animation.
 
 Wonderful, UI is always responsive and the user can terminate the application during
 the long operation at any time.
