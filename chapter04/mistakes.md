@@ -116,4 +116,36 @@ become usual Qt example, that "can do nothing". I use this application for my ow
 needs from time to time. I need to have a simple GIF editor that can crop and remove
 unnecessary frames. I need it. And I wanted to show readers "real world" examples.
 
+## Reduce memory usage
+
+In first version of the application I created `std::vector< Magick::Image >` of
+all frames and additionally I set to each frame full copy of `Magick::Image` as
+`QImage` for drawing with Qt. This is waste. I declared auxiliary struct...
+
+```cpp
+//! Reference to full image.
+struct ImageRef final {
+	using PosType = std::vector< Magick::Image >::size_type;
+	const std::vector< Magick::Image > & m_data;
+	PosType m_pos;
+	bool m_isEmpty;
+}; // struct ImageRef
+```
+
+And just use it in frames. Yes, I created thumbnails of the images for drawing in Qt.
+But it's a small and necessary footprint. `Frame` class now has next methods...
+
+```cpp
+//! \return Image.
+const ImageRef & image() const;
+//! Set image.
+void setImagePos( const ImageRef::PosType & pos );
+//! Clear image.
+void clearImage();
+//! Apply image.
+void applyImage();
+```
+
+So I don't store two full copies of each frame as `Magic::Image` and `QImage`.
+
 [Back](../chapter03/impl.md) | [Contents](../README.md) | [Next](../chapter05/intro.md)
