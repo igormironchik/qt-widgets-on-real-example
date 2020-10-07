@@ -41,4 +41,5 @@ Free Documentation License".
    * [Dialogues](chapter05/dialog.md)
    * [Start of the application](chapter05/start.md)
 7. [Links](links.md)
-8. [GNU Free Documentation License](fdl-1.3.md)
+8. [Thanks](thanks.md)
+9. [GNU Free Documentation License](fdl-1.3.md)
