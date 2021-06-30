@@ -43,3 +43,7 @@ Free Documentation License".
 7. [Links](links.md)
 8. [Thanks](thanks.md)
 9. [GNU Free Documentation License](fdl-1.3.md)
+
+# Donate
+
+[Donate with BTC](https://github.com/igormironchik)
