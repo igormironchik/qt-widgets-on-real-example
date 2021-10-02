@@ -1,5 +1,8 @@
 # Chapter 2
 
+This chapter is true for Qt5 only, in Qt6 the rules of the game have
+been changed.
+
 In this chapter I will show how to work with `QCamera`, `QAbstractVideoSurface`.
 How to detect motion with OpenCV, capture with `QCamera` frames and store them
 in some place on the disk. This chapter is based on the real project SecurityCam
