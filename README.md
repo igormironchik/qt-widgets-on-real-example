@@ -41,7 +41,7 @@ Free Documentation License".
     * [Main window](chapter05/04.md)
     * [Dialogues](chapter05/05.md)
     * [Start of the application](chapter05/06.md)
-7.  [Porting from Qt5 to Qt6](chapter06/01.md)
+7.  [Chapter 6 - Porting from Qt5 to Qt6](chapter06/01.md)
 8.  [Links](links.md)
 9.  [Thanks](thanks.md)
 10. [GNU Free Documentation License](fdl-1.3.md)
