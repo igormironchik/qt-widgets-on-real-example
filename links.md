@@ -4,4 +4,4 @@
  * [ImageMagick - https://www.imagemagick.org/script/index.php](https://www.imagemagick.org/script/index.php)
  * [OpenCV - https://opencv.org/](https://opencv.org/)
 
-[Back](chapter05/start.md) | [Contents](README.md) | [Next](thanks.md)
+[Back](chapter06/01.md) | [Contents](README.md) | [Next](thanks.md)
