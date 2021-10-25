@@ -35,6 +35,7 @@ Free Documentation License".
     * [Implementation](chapter03/02.md)
 5.  [Chapter 4 - mistakes handling](chapter04/01.md)
 6.  [Chapter 5 - QML](chapter05/01.md)
+    * [Introduction](chapter05/01.md)
     * [C++ and QML](chapter05/02.md)
     * [Board](chapter05/03.md)
     * [Main window](chapter05/04.md)
