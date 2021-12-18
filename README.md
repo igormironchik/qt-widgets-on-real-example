@@ -45,7 +45,3 @@ Free Documentation License".
 8.  [Links](links.md)
 9.  [Thanks](thanks.md)
 10. [GNU Free Documentation License](fdl-1.3.md)
-
-# Donate
-
-[![](bitcoin-btc-logo-full.png)](https://github.com/igormironchik)
