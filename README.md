@@ -1,13 +1,21 @@
 # The book about real examples of Qt Widgets usage
 
-Copyright (C) 2019-2021 Igor Mironchik.
-
-Permission is granted to copy, distribute and/or modify this document
+> Copyright (C) 2019-2021 Igor Mironchik.
+> 
+> Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
 or any later version published by the Free Software Foundation;
 with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled "GNU
 Free Documentation License".
+
+> Note that in the last release of GIF Editor underlying work with GIF format
+was changed and use now [`qgiflib` library](https://github.com/igormironchik/qgiflib).
+`ImageMagick` is not very good to work with GIF, as it needs to have all frames
+in memory, that with large GIFs makes GIF Editor unusable, whereas `qgiflib`
+stores actual frames as PNG files on disk, that allows to load really big GIFs.
+>
+> So keep it in mind when you'll be read this book.
 
 1.  [Preface](preface.md)
 2.  [Chapter 1 - GIF editor](chapter01/01.md)
