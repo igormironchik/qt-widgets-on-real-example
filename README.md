@@ -15,7 +15,7 @@ was changed and use now [`qgiflib` library](https://github.com/igormironchik/qgi
 in memory, that with large GIFs makes GIF Editor unusable, whereas `qgiflib`
 stores actual frames as PNG files on disk, that allows to load really big GIFs.
 >
-> So keep it in mind when you'll be read this book.
+> So keep it in mind when you'll read this book.
 
 1.  [Preface](preface.md)
 2.  [Chapter 1 - GIF editor](chapter01/01.md)
