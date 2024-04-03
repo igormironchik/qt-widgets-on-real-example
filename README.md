@@ -1,6 +1,6 @@
 # The book about real examples of Qt Widgets usage
 
-> Copyright (C) 2019-2021 Igor Mironchik.
+> Copyright (C) 2019-2024 Igor Mironchik.
 > 
 > Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3

@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qt-widgets-on-real-example
+Upstream-Contact: Igor Mironchik <igor.mironchik@gmail.com>
+Source: https://github.com/igormironchik/qt-widgets-on-real-example
+
+Files: *.md */*.md */*.png
+Copyright: 2019-2024 Igor Mironchik <igor.mironchik@gmail.com>
+License: GFDL-1.3-or-later
+
+Files: examples/*
+Copyright: 2019-2024 Igor Mironchik <igor.mironchik@gmail.com>
+License: MIT
