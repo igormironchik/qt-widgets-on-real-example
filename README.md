@@ -1,4 +1,4 @@
-[![License: GPL](https://img.shields.io/badge/license-GFDLv1.3-blue
+[![License: GFDLv1.3](https://img.shields.io/badge/license-GFDLv1.3-blue
 )](https://www.gnu.org/licenses/fdl-1.3.html)
 
 # The book about real examples of Qt Widgets usage
