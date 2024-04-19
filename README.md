@@ -1,6 +1,12 @@
 [![License: GFDLv1.3](https://img.shields.io/badge/license-GFDLv1.3-blue
 )](https://www.gnu.org/licenses/fdl-1.3.html)
 
+> [!IMPORTANT]
+>
+> This project is not supported anymore. But can be reopened if interest will
+> be in it. Please, let me know if you need something. Just write me email to
+> `igor.mironchik at gmail.com`.
+
 # The book about real examples of Qt Widgets usage
 
 > Copyright (C) 2019-2024 Igor Mironchik.
